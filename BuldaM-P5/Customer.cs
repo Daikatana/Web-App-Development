@@ -7,7 +7,7 @@ using System.Web;
 /// Summary description for Customer
 /// </summary>
 /// 
-class Customer
+public class Customer
 {
     String emailAddress;
     String password;

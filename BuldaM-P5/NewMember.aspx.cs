@@ -19,7 +19,7 @@ public partial class NewMember : System.Web.UI.Page
 
 
     }
-    ArrayList CustomerAry = new ArrayList();
+    //ArrayList CustomerAry = new ArrayList();
 
     protected void btnSubmit_Click(object sender, EventArgs e)
     {

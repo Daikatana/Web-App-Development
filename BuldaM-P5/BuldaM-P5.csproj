@@ -57,19 +57,23 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Global.asax" />
     <Content Include="ConcertEvents.xml" />
     <Content Include="Default.aspx" />
     <Content Include="images\HoustonSkyline2.jpg" />
     <Content Include="Main.aspx" />
     <Content Include="MyStyle.css" />
-    <Content Include="App_Code\NewMember.aspx" />
+    <Content Include="NewMember.aspx" />
     <Content Include="PasswordRecover.aspx" />
     <Content Include="SportsEvents.xml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\Transaction.cs" />
-    <Content Include="App_Code\Customer.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs" />
+    <Compile Include="Transaction.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -84,11 +88,11 @@
     <Compile Include="Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Code\NewMember.aspx.cs">
+    <Compile Include="NewMember.aspx.cs">
       <DependentUpon>NewMember.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Code\NewMember.aspx.designer.cs">
+    <Compile Include="NewMember.aspx.designer.cs">
       <DependentUpon>NewMember.aspx</DependentUpon>
     </Compile>
     <Compile Include="PasswordRecover.aspx.cs">
