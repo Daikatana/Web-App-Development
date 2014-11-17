@@ -19,7 +19,7 @@ public partial class NewMember : System.Web.UI.Page
 
 
     }
-    //ArrayList CustomerAry = new ArrayList();
+    ArrayList CustomerAry = new ArrayList();
 
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
@@ -28,18 +28,26 @@ public partial class NewMember : System.Web.UI.Page
         //    // Create Furniture objects.
 
         Customer customer = new Customer();
-        //customer.FirstName = txtFName.Text;
-        //customer.LastName = txtLName.Text;
-        //customer.EmailAddress = txtEmail.Text;
-        //customer.PassWord = txtPwd.Text;
-        //customer.Phone = txtPhone.Text;
-        //customer.StreetAddress = txtAddr.Text;
-        //customer.City = txtCity.Text;
-        //customer.Zip = txtZip.Text;
-        //customer.State = lstState.Text;
+        customer.FirstName = txtFName.Text;
+        customer.LastName = txtLName.Text;
+        customer.EmailAddress = txtEmail.Text;
+        customer.PassWord = txtPwd.Text;
+        customer.Phone = txtPhone.Text;
+        customer.StreetAddress = txtAddr.Text;
+        customer.City = txtCity.Text;
+        customer.Zip = txtZip.Text;
+        customer.State = lstState.Text;
 
 
-        //CustomerAry.Add(customer);
+        CustomerAry.Add(customer);
+        if (Application["CustomerLst"] != null)
+        {
+            Application["CustomerLst"] = CustomerAry;
+        }
+
+        Response.Redirect("~/Default.aspx");
+
+
 
        // CustomerLst.Add(CustomerAry);
 

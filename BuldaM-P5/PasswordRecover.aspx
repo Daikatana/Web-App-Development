@@ -65,10 +65,10 @@
                     <asp:Button runat="server" ID="btnRecoverPwd" Style="height: 35px" Text="Submit"  OnClick="btnRecoverPwd_Click" CssClass="Button" />
                 </asp:TableCell>
             </asp:TableRow>
-
             </asp:Table>
 
         <asp:Panel runat="server">
+            <asp:Label runat="server" ID="pwdConfirmMsg" Style="height: 35px" />
             <%--This is a placeholder for the customer's password when the correct email address is entered--%>
         </asp:Panel>
 
