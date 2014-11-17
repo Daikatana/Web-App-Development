@@ -1,0 +1,5 @@
+C:\Users\Mike\Documents\UHCL\Fall 2014\CINF 4320-Web App Dev\Assignments\Ass5\BuldaM-P5\BuldaM-P5\obj\Debug\BuldaM-P5.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\UHCL\Fall 2014\CINF 4320-Web App Dev\Assignments\Ass5\BuldaM-P5\BuldaM-P5\bin\BuldaM-P5.dll
+C:\Users\Mike\Documents\UHCL\Fall 2014\CINF 4320-Web App Dev\Assignments\Ass5\BuldaM-P5\BuldaM-P5\bin\BuldaM-P5.pdb
+C:\Users\Mike\Documents\UHCL\Fall 2014\CINF 4320-Web App Dev\Assignments\Ass5\BuldaM-P5\BuldaM-P5\obj\Debug\BuldaM-P5.dll
+C:\Users\Mike\Documents\UHCL\Fall 2014\CINF 4320-Web App Dev\Assignments\Ass5\BuldaM-P5\BuldaM-P5\obj\Debug\BuldaM-P5.pdb

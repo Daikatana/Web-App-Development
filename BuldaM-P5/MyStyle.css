@@ -1,0 +1,178 @@
+/*This is a list of styles for various elements inside of the index.html document*/
+div.bannerTitle {
+    /*style for the background image of the company banner*/
+    background-image: url(images/HoustonSkyline2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-style: solid;
+    border-width: thin;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    position: relative;
+    height: 170px;
+}
+
+/*This styles the heading on the banner*/
+#companyName {
+    font-family: Verdana;
+    font-size: 65px;
+    text-align: center;
+    padding-top: 2px;
+    margin: auto;
+    color: white;
+    min-width: 50%;
+    text-shadow: -2px 0 red, 0 2px red, 2px 0 red, 0 -2px red;
+}
+
+/*This is the container to hold the banner image and its title*/
+div.bannerContainer {
+    border-style: solid;
+    /*padding:0;*/
+    border-width: thin;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 82%;
+    background-color: lavender;
+    position: relative;
+}
+
+.MessageContent {
+    border-style:solid;
+    border-color:navy;
+    border-width:thin;
+    background-color:lavender;
+    margin-left:20%;
+    margin-right:20%;
+    text-align:center;
+    color:maroon;
+    font-size:x-large;
+    font-weight: bold;
+}
+
+div.businessContent {
+    /*This is the color of the background for the business mission statement*/
+    background-color: lightgreen;
+}
+
+/*This styles the paragraph about the business*/
+#businessDesc {
+    font-family: Palatino,Verdana;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 0;
+    color: navy;
+    text-align: left;
+    margin-left: 50px;
+    font-size: medium;
+}
+
+div.formContainer {
+    border-style: solid;
+    padding: 0;
+    border-width: thin;
+    border-top: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 82%;
+    background-color: lightcyan;
+}
+
+/*Style for the radio option text for ticket type*/
+#ticketRadioBtn {
+    font-size: x-large;
+    font-family: Cambria,Georgia;
+    font: bold;
+    color: maroon;
+}
+
+.Button {
+    background-color:lightseagreen;
+    font-family: Verdana, 'Trebuchet MS';
+    font-size:medium;
+    color: white;
+    box-shadow:initial;
+}
+
+/*Style for radio button option of payment type*/
+#paymentRadioBtn {
+    font-size: larger;
+    font-family: "Trebuchet MS",Verdana;
+    font: bold;
+    color: darkgreen;
+    margin-left: 25%;
+    text-align: left;
+}
+
+/*Style for the label for the Account number input text field*/
+#accountNum {
+    font-size: larger;
+    font-family: "Trebuchet MS",Verdana;
+    font: bold;
+    color: darkorange;
+    margin-left: 25%;
+    text-align: left;
+}
+
+/*Style for the important note about the shipping of the ticket*/
+#shipNote {
+    color: red;
+    font-family: Verdana;
+    font-style: italic;
+    font-size: large;
+}
+
+/*Style for the Ticket holder and postal address information*/
+#HolderInfo {
+    font-size: larger;
+    font-family: "Trebuchet MS",Verdana;
+    font: bold;
+    color: darkorange;
+    margin-left: 25%;
+    text-align: left;
+}
+
+.GeneralTable {
+    border: thin solid navy;
+    margin: auto;
+    padding: 5px;
+    background-color:lightgreen;
+    }
+
+.RegisteredTable {
+    border: thin solid navy;
+    background-color:lightgreen;
+    float:left;
+    margin-left:25%;
+    
+}
+.newMemberTable {
+    border-color: navy;
+    border-style:solid;
+    border-width:thin;
+    background-color:lightblue;
+    float:right;
+    margin-right:405px;
+}
+
+/*TableDesign.newLogin {
+    border-color: navy;
+    border-style:solid;
+}*/
+
+#ticketBtn {
+    /*size style for the View Tickets button*/
+    margin-left: 14px;
+    margin-top: 10px;
+}
+
+td.eventTitle {
+    /*This styles the heading over the event drop-down menu*/
+    font-family: Cambria,Georgia;
+    font: bold;
+    color: maroon;
+    font-size: large;
+    stroke: ActiveBorder;
+}
