@@ -73,6 +73,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
+    <Compile Include="PasswordRecover.aspx.cs">
+      <DependentUpon>PasswordRecover.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PasswordRecover.aspx.designer.cs">
+      <DependentUpon>PasswordRecover.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Transaction.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -94,13 +101,6 @@
     </Compile>
     <Compile Include="NewMember.aspx.designer.cs">
       <DependentUpon>NewMember.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PasswordRecover.aspx.cs">
-      <DependentUpon>PasswordRecover.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PasswordRecover.aspx.designer.cs">
-      <DependentUpon>PasswordRecover.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

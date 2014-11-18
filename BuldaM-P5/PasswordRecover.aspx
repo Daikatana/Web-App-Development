@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PasswordRecover.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="True" Inherits="PasswordRecover" Codebehind="PasswordRecover.aspx.cs" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title>Email Login</title>
 
     <!--Link to a CSS external file to simplify layout style-->
@@ -42,8 +42,8 @@
     <form id="memberForm" runat="server">
        
         <asp:Panel ID="pnlRecoverPwdMsg" CssClass="MessageContent" runat="server">
-            <asp:Label runat="server" Text="Just tell us the email you used to create your Ticket Connection account."></asp:Label>
-            <asp:Label runat="server" Text="We'll email/give you the password."></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Just tell us the email you used to create your Ticket Connection account."></asp:Label>
+            <asp:Label ID="Label2" runat="server" Text="We'll email/give you the password."></asp:Label>
         </asp:Panel>
 
         <asp:Table runat="server" ID="forgotPwdTable" CssClass="GeneralTable">
@@ -62,12 +62,12 @@
                 </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell ColumnSpan="2">
-                    <asp:Button runat="server" ID="btnRecoverPwd" Style="height: 35px" Text="Submit"  OnClick="btnRecoverPwd_Click" CssClass="Button" />
+                    <asp:Button runat="server" ID="btnRecoverPwd" Style="height: 35px" Text="Submit" OnClick="btnRecoverPwd_Click" CssClass="Button" />
                 </asp:TableCell>
             </asp:TableRow>
             </asp:Table>
 
-        <asp:Panel runat="server">
+        <asp:Panel ID="Panel1" runat="server">
             <asp:Label runat="server" ID="pwdConfirmMsg" Style="height: 35px" />
             <%--This is a placeholder for the customer's password when the correct email address is entered--%>
         </asp:Panel>
