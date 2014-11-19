@@ -11,13 +11,13 @@ public partial class NewMember : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //if (!Page.IsPostBack)
-        //{
-        //    Session["customerAry"] = CustomerAry;
-
-        //}
-
-
+        ReqFldVal_Addr.Enabled = false;
+        ReqFldVal_City.Enabled = false;
+        ReqFldVal_FName.Enabled = false;
+        ReqFldVal_Pwd.Enabled = false;
+        ReqFldVal_Zip.Enabled = false;
+        ReqFldVal_ReenterPwd.Enabled = false;
+        ReqFldVal_LName.Enabled = false;
     }
 
     ArrayList CustomerAry;
@@ -65,23 +65,73 @@ public partial class NewMember : System.Web.UI.Page
 
        // CustomerLst.Add(CustomerAry);
 
+    }
+  
+    protected void btnFindMatch_Click(object sender, EventArgs e)
+    {
+        if (Application["CustomerList"] != null)
+        {
+            ArrayList myObjLst = (ArrayList)Application["CustomerList"];
 
-        //    //Furniture piece1 = new Furniture("Econo Sofa",
-        //    //                            "Acme Inc.", 74.99M);
-        //    //Furniture piece2 = new Furniture("Pioneer Table",
-        //    //                            "Heritage Unit", 866.75M);
-        //    //Furniture piece3 = new Furniture("Retro Cabinet",
-        //    //                            "Sixties Ltd.", 300.11M);
+            foreach (Customer currObj in myObjLst)
+            {
+                if (currObj.EmailAddress.CompareTo(txtEmail.Text) == 0)
+                {
+                    Application["CustomerList"] = myObjLst;
+                    Page.Response.Write(@"<script language='javascript'>alert('Entered email already exists.\nPlease use \'Forgot Password\' option.');</script>");
+                    break;
+                }
+                else
+                {
+                    Application["CustomerList"] = myObjLst;
+                    Page.Response.Write(@"<script language='javascript'>alert('The email address entered is available for use. Fill in your personal information.');</script>");
+                    txtFName.Enabled = true;
+                    txtLName.Enabled = true;
+                    txtAddr.Enabled = true;
+                    txtPhone.Enabled = true;
+                    txtPwd.Enabled = true;
+                    txtZip.Enabled = true;
+                    txtReenterPwd.Enabled = true;
+                    txtCity.Enabled = true;
+                    lstState.Enabled = true;
 
-        //    //// Add objects to session state.
-        //    //Session["Furniture1"] = piece1;
-        //    //Session["Furniture2"] = piece2;
-        //    //Session["Furniture3"] = piece3;
+                    ReqFldVal_Addr.Enabled = true;
+                    ReqFldVal_City.Enabled = true;
+                    ReqFldVal_FName.Enabled = true;
+                    ReqFldVal_Pwd.Enabled = true;
+                    ReqFldVal_Zip.Enabled = true;
+                    ReqFldVal_ReenterPwd.Enabled = true;
+                    ReqFldVal_LName.Enabled = true;
 
-        //    //// Add rows to list control.			
-        //    //lstItems.Items.Add(piece1.Name);
-        //    //lstItems.Items.Add(piece2.Name);
-        //    //lstItems.Items.Add(piece3.Name);
-        //}
+                    btnSubmit.Enabled = true;
+                }
+            }
+
+        }
+        else
+        {
+            Page.Response.Write(@"<script language='javascript'>alert('The email address entered is available for use. \nFill in your personal information.');</script>");
+            
+            //enable the grayed out controls and their validators
+            txtFName.Enabled = true;
+            txtLName.Enabled = true;
+            txtAddr.Enabled = true;
+            txtPhone.Enabled = true;
+            txtPwd.Enabled = true;
+            txtZip.Enabled = true;
+            txtReenterPwd.Enabled = true;
+            txtCity.Enabled = true;
+            lstState.Enabled = true;
+
+            ReqFldVal_Addr.Enabled = true;
+            ReqFldVal_City.Enabled = true;
+            ReqFldVal_FName.Enabled = true;
+            ReqFldVal_Pwd.Enabled = true;
+            ReqFldVal_Zip.Enabled = true;
+            ReqFldVal_ReenterPwd.Enabled = true;
+            ReqFldVal_LName.Enabled = true;
+
+            btnSubmit.Enabled = true;
+        }
     }
 }

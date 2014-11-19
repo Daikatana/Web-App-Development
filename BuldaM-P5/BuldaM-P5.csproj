@@ -66,6 +66,7 @@
     <Content Include="NewMember.aspx" />
     <Content Include="PasswordRecover.aspx" />
     <Content Include="SportsEvents.xml" />
+    <Content Include="SuccessMsg.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +74,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
@@ -83,11 +88,14 @@
     <Compile Include="PasswordRecover.aspx.designer.cs">
       <DependentUpon>PasswordRecover.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Transaction.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="SuccessMsg.aspx.cs">
+      <DependentUpon>SuccessMsg.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="SuccessMsg.aspx.designer.cs">
+      <DependentUpon>SuccessMsg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction.cs" />
     <Compile Include="Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

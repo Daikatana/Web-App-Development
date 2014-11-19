@@ -113,7 +113,7 @@
         <asp:Panel ID="Panel1" runat="server">
             <asp:Label runat="server" ID="pwdConfirmMsg" Style="height: 35px" /><br />
             <%--This is a placeholder for the customer's password when the correct email address is entered--%>
-            <asp:Button runat="server" Text="OK" ID="btnReturnToDefault" OnClick="ReturnToDefault_Click"/>
+            <asp:Button runat="server" Text="OK" ID="btnReturnToDefault" CssClass="Button" OnClick="ReturnToDefault_Click"/>
         </asp:Panel>
 
     </form>
