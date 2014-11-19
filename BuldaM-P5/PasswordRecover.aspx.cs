@@ -15,20 +15,25 @@ using System.Web.UI.WebControls;
         }
         protected void btnRecoverPwd_Click(object sender, EventArgs e)
         {
-            if (Application["CustomerLst"] != null)
+            if (Application["CustomerList"] != null)
             {
+                ArrayList myObjLst = (ArrayList)Application["CustomerList"];
+                //ArrayList myObjLst = new ArrayList();
+                //    Customer currCustomer = new Customer();
+                //   currCustomer = (Customer)Application["SingleCustomer"];
+                //myObjLst.Add(currCustomer);
+                //Application["CustomerList"] = myObjLst;
                 //ArrayList myObjLst = Application["CustomerLst"] as ArrayList;
-                ArrayList myObjLst = new ArrayList();
-                myObjLst.Add(Application["CustomerLst"]);
-                //ArrayList myObjLst = (ArrayList)Application["CustomerLst"];
-                //Customer currObj = new Customer();
+                //ArrayList myObjLst = new ArrayList();
+                //myObjLst.Add(Application["CustomerLst"]);
+                
                 foreach (Customer currObj in myObjLst)
                 {
                     if (currObj.EmailAddress.CompareTo(txtEmailRecover.Text) != 0)
                     //if (currObj.EmailAddress == "hello@yahoo.com")
                     {
-                        pwdConfirmMsg.Text = "The email address entered could not be found";
-                        break;
+                        //pwdConfirmMsg.Text = "The email address entered could not be found";
+                        continue;
                     }
                     else
                     {
@@ -40,22 +45,12 @@ using System.Web.UI.WebControls;
                     }
                 }
                 
-
-                //int lstLength = myObjLst.Count - 1;
-                //for (int count = 0; count < lstLength; count++)
-                //{
-                //    if (myObjLst.Email.CompareTo("hello@yahoo.com"))
-                //    {
-                //    }
-                //}
-
-                //String email = myObj.EmailAddress;
-                //foreach (object key in Application.AllKeys)
-                //{
-                //    myObj = Application[key];
-                //}
             }
-
+            else
+            {
+                pwdConfirmMsg.Text = "There are no accounts stored in our database. Be the first!";
+            }
+            
             
         }
 

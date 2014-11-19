@@ -19,13 +19,12 @@ public partial class NewMember : System.Web.UI.Page
 
 
     }
-    ArrayList CustomerAry = new ArrayList();
+
+    ArrayList CustomerAry;
 
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
-        //if (!this.IsPostBack)
-        //{
-        //    // Create Furniture objects.
+        
 
         Customer customer = new Customer();
         customer.FirstName = txtFName.Text;
@@ -36,16 +35,30 @@ public partial class NewMember : System.Web.UI.Page
         customer.StreetAddress = txtAddr.Text;
         customer.City = txtCity.Text;
         customer.Zip = txtZip.Text;
-        customer.State = lstState.Text;
+        customer.State = lstState.Text;  
+
+        if (Application["CustomerList"] != null)
+        {
+            CustomerAry = (ArrayList)Application["CustomerList"];
+            CustomerAry.Add(customer);
+            Application["CustomerList"] = CustomerAry;
+        }
+        else
+        {
+            CustomerAry = new ArrayList();
+            CustomerAry.Add(customer);
+            Application["CustomerList"] = CustomerAry;
+        }
 
 
-        //CustomerAry.Add(customer);
+
+        
         //if (Application["CustomerLst"] != null)
         //{
-            Application["CustomerLst"] = customer;
+            Application["CustomerLst"] = CustomerAry;
         //}
 
-            Response.Write("<script language='javascript'>alert('Your password is ')</script>");
+        //Response.Write("<script language='javascript'>alert('Your password is ')</script>");
         Response.Redirect("~/Default.aspx");
 
 
