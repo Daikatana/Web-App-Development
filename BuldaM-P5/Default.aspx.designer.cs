@@ -12,31 +12,13 @@
 public partial class _Default {
     
     /// <summary>
-    /// Head1 control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
-    
-    /// <summary>
     /// memberForm control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
- 
-    
-    /// <summary>
-    /// Panel1 control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.Panel Panel1;
+    protected global::System.Web.UI.HtmlControls.HtmlForm memberForm;
     
     /// <summary>
     /// LoginInfo control.
@@ -66,22 +48,31 @@ public partial class _Default {
     protected global::System.Web.UI.WebControls.TableCell lblEmail;
     
     /// <summary>
-    /// txtEmail control.
+    /// txtEmailDefaultPg control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.TableCell txtEmail;
+    protected global::System.Web.UI.WebControls.TableCell txtEmailDefaultPg;
     
     /// <summary>
-    /// TextBox1 control.
+    /// ReqFldVal_EmailDefaultPg control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.TextBox TextBox1;
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqFldVal_EmailDefaultPg;
+    
+    /// <summary>
+    /// RegExpVal_Email control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RegularExpressionValidator RegExpVal_Email;
     
     /// <summary>
     /// lblPwd control.
@@ -93,22 +84,31 @@ public partial class _Default {
     protected global::System.Web.UI.WebControls.TableCell lblPwd;
     
     /// <summary>
-    /// txtPwd control.
+    /// txtPwdDefaultPg control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.TextBox txtPwd;
+    protected global::System.Web.UI.WebControls.TextBox txtPwdDefaultPg;
     
     /// <summary>
-    /// Label1 control.
+    /// ReqFldVal_PwdDefaultPg control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Label Label1;
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqFldVal_PwdDefaultPg;
+    
+    /// <summary>
+    /// RegExpVal_txtPwd control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RegularExpressionValidator RegExpVal_txtPwd;
     
     /// <summary>
     /// btnSignIn control.
@@ -118,15 +118,6 @@ public partial class _Default {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.Button btnSignIn;
-    
-    /// <summary>
-    /// HyperLink1 control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
     
     /// <summary>
     /// newLoginInfo control.

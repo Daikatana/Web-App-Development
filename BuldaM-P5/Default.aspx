@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="True" Inherits="_Default" Codebehind="Default.aspx.cs" %>
 
 <!DOCTYPE html>
 
@@ -51,7 +51,25 @@
 
             </asp:TableRow>
             <asp:TableRow>
-                <asp:TableCell ID="txtEmail"><asp:TextBox runat="server"></asp:TextBox></asp:TableCell>
+                <asp:TableCell ID="txtEmailDefaultPg"><asp:TextBox runat="server"></asp:TextBox>
+                <br />
+                        <asp:RequiredFieldValidator ID="ReqFldVal_EmailDefaultPg" runat="server"
+                            ControlToValidate="txtEmailDefaultPg"
+                            Font-Name="'Arial Narrow'"
+                            ForeColor="Red"
+                            Font-Size="Medium"
+                            ErrorMessage="Email address is required!">
+                        </asp:RequiredFieldValidator>
+                        <br />
+                        <asp:RegularExpressionValidator ID="RegExpVal_Email" runat="server"
+                            ControlToValidate="txtEmailDefaultPg"
+                            Font-Name="'Arial Narrow'"
+                            ForeColor="Red"
+                            Font-Size="Medium"
+                            ErrorMessage="Not a valid email address."
+                            ValidationExpression="^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$">
+                        </asp:RegularExpressionValidator>
+                    </asp:TableCell>
             </asp:TableRow>
 
             <asp:TableRow>
@@ -59,7 +77,24 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:TextBox ID="txtPwd" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPwdDefaultPg" runat="server"></asp:TextBox>
+                    <br />
+                        <asp:RequiredFieldValidator ID="ReqFldVal_PwdDefaultPg" runat="server"
+                            ControlToValidate="txtPwdDefaultPg"
+                            Font-Name="'Arial Narrow'"
+                            ForeColor="Red"
+                            Font-Size="Medium"
+                            ErrorMessage="Password field is required!">
+                        </asp:RequiredFieldValidator>
+                        <br />
+                        <asp:RegularExpressionValidator ID="RegExpVal_txtPwd" runat="server"
+                            ControlToValidate="txtPwdDefaultPg"
+                            Font-Name="'Arial Narrow'"
+                            ForeColor="Red"
+                            Font-Size="Medium"
+                            ErrorMessage="Enter a password that is 6-20 characters long. It must contain at least 1 uppercase and 1 lowercase letter, and 1 special character."
+                            ValidationExpression="^.*(?=.{6,20})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$">
+                        </asp:RegularExpressionValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -69,7 +104,7 @@
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>
-                    <asp:Button runat="server" ID="btnSignIn" Style="height: 35px" Text="Sign In" CssClass="Button" />
+                    <asp:Button runat="server" ID="btnSignIn" Style="height: 35px" Text="Sign In" OnClick="btnSignIn_Click" CssClass="Button" />
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
@@ -94,11 +129,6 @@
             </asp:TableRow>
         </asp:Table>
         </asp:Panel>
-
-        <%--<asp:TextBox runat="server" ID="ticketHolderName"></asp:TextBox></asp:TableCell>
-                    <asp:TableCell RowSpan="2">
-                        <asp:Button runat="server" ID="ticketBtn" Text="View Tickets" Height="53px" Width="150px" OnClick="ticketBtn_Click" /></asp:TableCell>
-                </asp:TableRow>--%>
     </form>
 </body>
 </html>

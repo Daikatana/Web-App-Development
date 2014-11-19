@@ -32,8 +32,7 @@ using System.Web.UI.WebControls;
                     if (currObj.EmailAddress.CompareTo(txtEmailRecover.Text) != 0)
                     //if (currObj.EmailAddress == "hello@yahoo.com")
                     {
-                        //pwdConfirmMsg.Text = "The email address entered could not be found";
-                        continue;
+                        pwdConfirmMsg.Text = "The email address entered could not be found";
                     }
                     else
                     {
@@ -42,6 +41,7 @@ using System.Web.UI.WebControls;
                         //Console.WriteLine("Your PasswordRecover is " + pwd);
                         // txtEmailRecover.Text = "This is your last chance!";
                         pwdConfirmMsg.Text = "Your password is " + pwd;
+                        break;
                     }
                 }
                 

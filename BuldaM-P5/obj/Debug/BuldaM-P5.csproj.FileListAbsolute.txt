@@ -12,4 +12,3 @@ C:\Users\Mike\Documents\GitHub\BuldaM-P5\Web-App-Development\Web-App-Development
 C:\Users\Mike\Documents\GitHub\BuldaM-P5\Web-App-Development\Web-App-Development\BuldaM-P5\bin\BuldaM-P5.pdb
 C:\Users\Mike\Documents\GitHub\BuldaM-P5\Web-App-Development\Web-App-Development\BuldaM-P5\obj\Debug\BuldaM-P5.dll
 C:\Users\Mike\Documents\GitHub\BuldaM-P5\Web-App-Development\Web-App-Development\BuldaM-P5\obj\Debug\BuldaM-P5.pdb
-C:\Users\Mike\Documents\GitHub\BuldaM-P5\Web-App-Development\Web-App-Development\BuldaM-P5\obj\Debug\BuldaM-P5.csprojResolveAssemblyReference.cache
