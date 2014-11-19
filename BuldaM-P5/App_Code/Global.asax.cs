@@ -13,9 +13,9 @@ namespace BuldaM_P5.App_Code
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            ArrayList CustomerLst = new ArrayList();
-            Customer customerObj = new Customer();
-            Application["CustomerList"] = CustomerLst;
+            //ArrayList CustomerLst = new ArrayList();
+            //Customer customerObj = new Customer();
+            Application["CustomerList"] = new ArrayList();
 
         }
 
@@ -46,7 +46,7 @@ namespace BuldaM_P5.App_Code
 
         protected void Application_End(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

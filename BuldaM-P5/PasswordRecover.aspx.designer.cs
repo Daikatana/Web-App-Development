@@ -75,6 +75,24 @@ public partial class PasswordRecover {
     protected global::System.Web.UI.WebControls.TextBox txtEmailRecover;
     
     /// <summary>
+    /// ReqFldVal_EmailRecover control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqFldVal_EmailRecover;
+    
+    /// <summary>
+    /// RegExpVal_Email control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RegularExpressionValidator RegExpVal_Email;
+    
+    /// <summary>
     /// txtEmailRecoverReenter control.
     /// </summary>
     /// <remarks>
@@ -82,6 +100,33 @@ public partial class PasswordRecover {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.TextBox txtEmailRecoverReenter;
+    
+    /// <summary>
+    /// ReqFldVal_EmailRecoverReenter control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqFldVal_EmailRecoverReenter;
+    
+    /// <summary>
+    /// RegExpVal_EmailRecoverReenter control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RegularExpressionValidator RegExpVal_EmailRecoverReenter;
+    
+    /// <summary>
+    /// CompVal_RecoverEmail control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.CompareValidator CompVal_RecoverEmail;
     
     /// <summary>
     /// btnRecoverPwd control.
@@ -109,4 +154,13 @@ public partial class PasswordRecover {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.Label pwdConfirmMsg;
+    
+    /// <summary>
+    /// btnReturnToDefault control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Button btnReturnToDefault;
 }

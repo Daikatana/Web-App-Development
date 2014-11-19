@@ -39,12 +39,13 @@ public partial class NewMember : System.Web.UI.Page
         customer.State = lstState.Text;
 
 
-        CustomerAry.Add(customer);
-        if (Application["CustomerLst"] != null)
-        {
-            Application["CustomerLst"] = CustomerAry;
-        }
+        //CustomerAry.Add(customer);
+        //if (Application["CustomerLst"] != null)
+        //{
+            Application["CustomerLst"] = customer;
+        //}
 
+            Response.Write("<script language='javascript'>alert('Your password is ')</script>");
         Response.Redirect("~/Default.aspx");
 
 
