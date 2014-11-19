@@ -9,7 +9,7 @@
 
 
 
-public partial class _Default {
+public partial class DefaultPage {
     
     /// <summary>
     /// memberForm control.
@@ -30,40 +30,13 @@ public partial class _Default {
     protected global::System.Web.UI.WebControls.Table LoginInfo;
     
     /// <summary>
-    /// registeredTitle control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.TableCell registeredTitle;
-    
-    /// <summary>
-    /// lblEmail control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.TableCell lblEmail;
-    
-    /// <summary>
     /// txtEmailDefaultPg control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.TableCell txtEmailDefaultPg;
-    
-    /// <summary>
-    /// ReqFldVal_EmailDefaultPg control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqFldVal_EmailDefaultPg;
+    protected global::System.Web.UI.WebControls.TextBox txtEmailDefaultPg;
     
     /// <summary>
     /// RegExpVal_Email control.
@@ -75,15 +48,6 @@ public partial class _Default {
     protected global::System.Web.UI.WebControls.RegularExpressionValidator RegExpVal_Email;
     
     /// <summary>
-    /// lblPwd control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.TableCell lblPwd;
-    
-    /// <summary>
     /// txtPwdDefaultPg control.
     /// </summary>
     /// <remarks>
@@ -93,13 +57,13 @@ public partial class _Default {
     protected global::System.Web.UI.WebControls.TextBox txtPwdDefaultPg;
     
     /// <summary>
-    /// ReqFldVal_PwdDefaultPg control.
+    /// Label1 control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqFldVal_PwdDefaultPg;
+    protected global::System.Web.UI.WebControls.Label Label1;
     
     /// <summary>
     /// RegExpVal_txtPwd control.
@@ -120,22 +84,31 @@ public partial class _Default {
     protected global::System.Web.UI.WebControls.Button btnSignIn;
     
     /// <summary>
-    /// newLoginInfo control.
+    /// HyperLink1 control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Table newLoginInfo;
+    protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
     
     /// <summary>
-    /// newMemberHead control.
+    /// Label2 control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.TableCell newMemberHead;
+    protected global::System.Web.UI.WebControls.Label Label2;
+    
+    /// <summary>
+    /// Label3 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Label Label3;
     
     /// <summary>
     /// btnRegister control.

@@ -16,7 +16,7 @@ namespace BuldaM_P5.App_Code
             //ArrayList CustomerLst = new ArrayList();
             //Customer customerObj = new Customer();
             Application["CustomerList"] = new ArrayList();
-            Application["SingleCustomer"] = new Customer();
+            Application["TransactionList"] = new ArrayList();
 
         }
 

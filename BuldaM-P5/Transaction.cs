@@ -4,15 +4,68 @@ using System.Linq;
 using System.Web;
 
 
-    public class Transaction
+public class Transaction
+{
+    String emailAddress; //Primary Key
+    int ticketNumber; //Order Locator number
+    int numberOfTickets;
+    String ticketHolderName;
+    String shippingAddress;
+    String eventName;
+    String payMethod;
+    String accountNumber;
+    //Add properties as needed
+
+    public Transaction()
     {
-        String emailAddress; //Primary Key
-        long ticketNumber; //Order Locator number
-        byte numberOfTickets;
-        String ticketHolderName;
-        String shippingAddress;
-        String eventName;
-        String payMethod;
-        String accountNumber;
-        //Add properties as needed
+        //
+        // TODO: Add constructor logic here
+        //
     }
+
+    public int NumberOfTickets
+    {
+        get { return numberOfTickets; }
+        set { numberOfTickets = value; }
+    }
+
+    //Add the properties. Example shown below.
+    public String EmailAddress
+    {
+        get { return emailAddress; }
+        set { emailAddress = value; }
+    }
+    public int TicketNumber
+    {
+        get { return ticketNumber; }
+        set { ticketNumber = value; }
+    }
+    public String TicketHolderName
+    {
+        get { return ticketHolderName; }
+        set { ticketHolderName = value; }
+    }
+
+    public String ShippingAddress
+    {
+        get { return shippingAddress; }
+        set { shippingAddress = value; }
+    }
+    public String EventName
+    {
+        get { return eventName; }
+        set { eventName = value; }
+    }
+    public String PayMethod
+    {
+        get { return payMethod; }
+        set { payMethod = value; }
+    }
+
+    public String AccountNumber
+    {
+        get { return accountNumber; }
+        set { accountNumber = value; }
+    }
+
+}

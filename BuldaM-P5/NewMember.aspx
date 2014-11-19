@@ -49,7 +49,7 @@
     <form id="frmNewMember" runat="server">
         <div>
             <%--Table that will hold information for the user to enter personal information--%>
-            <asp:Table runat="server" CssClass="GeneralTable" ID="newMemTable" BorderColor="Blue" BorderStyle="Solid" Width="82%" BorderWidth="2" BackColor="Linen">
+            <asp:Table runat="server" CssClass="GeneralTable" ID="newMemTable" BorderColor="Blue" BorderStyle="Solid" Width="82%" BorderWidth="2" BackColor="LightCyan">
 
                 <%--Row that contains email address textboxes--%>
                 <asp:TableRow>
@@ -127,7 +127,7 @@
                 <%--Check to see if the email address is already used--%>
                 <asp:TableRow>
                     <asp:TableCell ColumnSpan="2">
-                        <asp:Button runat="server" ID="btnRegister" Style="height: 35px" Text="Is This Email Address in Use?" CssClass="Button" />
+                        <asp:Button runat="server" ID="btnFindMatch" Style="height: 35px" Text="Is This Email Address in Use?" CssClass="Button" OnClick="btnFindMatch_Click" />
                     </asp:TableCell>
                 </asp:TableRow>
 
@@ -135,10 +135,10 @@
 
                 <asp:TableRow>
                     <asp:TableCell>
-                        <asp:Label Text="Password *" runat="server">
+                        <asp:Label Text="Password *" runat="server" Enabled="false">
                         </asp:Label>
                         <br />
-                        <asp:TextBox ID="txtPwd" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtPwd" runat="server" Enabled="false" TextMode="Password"></asp:TextBox>
 
                         <%--Validate the password textboxes here--%>
                         <br />
@@ -164,7 +164,7 @@
                         <asp:Label Text="Re-enter Password *" runat="server">
                         </asp:Label>
                         <br />
-                         <asp:TextBox ID="txtReenterPwd" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="txtReenterPwd" runat="server" Enabled="false" TextMode="Password"></asp:TextBox>
                         <br />
                         <asp:RequiredFieldValidator ID="ReqFldVal_ReenterPwd" runat="server"
                             ControlToValidate="txtReenterPwd"
@@ -208,7 +208,7 @@
                 <%--Validate the first and last name textboxes--%>
                 <asp:TableRow>
                     <asp:TableCell>
-                        <asp:TextBox ID="txtFName" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtFName" runat="server" Enabled="false"></asp:TextBox>
                         <br />
                         <asp:RequiredFieldValidator ID="ReqFldVal_FName" runat="server"
                             ControlToValidate="txtFName"
@@ -231,7 +231,7 @@
 
                     </asp:TableCell>
                     <asp:TableCell>
-                        <asp:TextBox ID="txtLName" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtLName" runat="server" Enabled="false"></asp:TextBox>
                         <br />
                         <asp:RequiredFieldValidator ID="ReqFldVal_LName" runat="server"
                             ControlToValidate="txtLName"
@@ -264,7 +264,7 @@
                 </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell ColumnSpan="2">
-                        <asp:TextBox ID="txtAddr" runat="server" Width="100%"></asp:TextBox>
+                        <asp:TextBox ID="txtAddr" runat="server" Width="100%" Enabled="false"></asp:TextBox>
 
                         <%--Validate the street address here--%>
 
@@ -296,7 +296,7 @@
                         <asp:Label Text="City *" runat="server">
                         </asp:Label>
                         <br />
-                        <asp:TextBox ID="txtCity" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtCity" runat="server" Enabled="false"></asp:TextBox>
                         <br />
                         <asp:RequiredFieldValidator ID="ReqFldVal_City" runat="server"
                             ControlToValidate="txtCity"
@@ -316,9 +316,9 @@
                         </asp:RegularExpressionValidator>
                     </asp:TableCell>
                     <asp:TableCell>
-                    <asp:Label runat="server" Text="State"></asp:Label>
+                    <asp:Label runat="server" Text="State" ></asp:Label>
                         <br />
-                         <asp:DropDownList ID="lstState" runat="server">
+                         <asp:DropDownList ID="lstState" runat="server" Enabled="false">
                             <asp:ListItem Value="AL">AL</asp:ListItem>
                             <asp:ListItem Value="AK">AK</asp:ListItem>
                             <asp:ListItem Value="AZ">AZ</asp:ListItem>
@@ -380,13 +380,13 @@
                         </asp:Label>
                     </asp:TableCell>
                     <asp:TableCell>
-                        <asp:Label Text="Phone (E.g. (281) 467-9581)" runat="server">
+                        <asp:Label Text="Phone (E.g. (281) 467-9581)" runat="server" Enabled="false">
                         </asp:Label>
                     </asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell>
-                        <asp:TextBox ID="txtZip" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtZip" runat="server" Enabled="false"></asp:TextBox>
 
                         <br />
                          <asp:RequiredFieldValidator ID="ReqFldVal_Zip" runat="server"
@@ -411,7 +411,7 @@
 
                     </asp:TableCell>
                     <asp:TableCell>
-                        <asp:TextBox ID="txtPhone" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtPhone" runat="server" Enabled="false"></asp:TextBox>
 
                         <br />
 
@@ -430,7 +430,7 @@
 
                 <asp:TableRow>
                     <asp:TableCell ColumnSpan="2">
-                        <asp:Button runat="server" ID="btnSubmit" Style="height: 35px" Text="Submit" OnClick="btnSubmit_Click" CssClass="Button" />
+                        <asp:Button runat="server" ID="btnSubmit" Style="height: 35px" Text="Submit" OnClick="btnSubmit_Click" CssClass="Button" Enabled="false" />
                     </asp:TableCell>
                 </asp:TableRow>
 

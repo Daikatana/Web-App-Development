@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Main.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="True" EnableEventValidation="false" CodeBehind="Main.aspx.cs" Inherits="Main" %>
 
 <!DOCTYPE html>
 
@@ -31,7 +31,7 @@
 -->
 
 
-<head runat="server">
+<head id="Head1" runat="server">
     <title>Houston Ticket Link Home</title>
 
     <script type="text/javascript">
@@ -158,189 +158,229 @@
 
     <!--create a form to run serverside-->
     <form id="serverForm" runat="server">
-    <div class="formContainer">
-        <!--Radio button information-->
-        <div id="ticketRadioBtn">
-            Select ticket type:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <div class="formContainer">
+            <!--Radio button information-->
+            <div id="ticketRadioBtn">
+                Select ticket type:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
             <!--asp Radio button controls to change what type of evens (sports or concerts) are displayed in the dropdown list-->
-            <asp:RadioButton ID="optSports" GroupName="ticketType" runat="server" Checked="True" OnClick="loadSportsEvents();"/>Houston Sports&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            <asp:RadioButton ID="optConcerts" GroupName="ticketType" runat="server" OnClick="loadConcertEvents();"/>Houston Concerts
-        </div>
-        <br />
+                <asp:RadioButton ID="optSports" GroupName="ticketType" runat="server" Checked="True" OnClick="loadSportsEvents();" />Houston Sports&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <asp:RadioButton ID="optConcerts" GroupName="ticketType" runat="server" OnClick="loadConcertEvents();" />Houston Concerts
+            </div>
+            <br />
 
-        <!--***************************************************Drop down menu with events and ticket quantity***********************************************************-->
+            <!--***************************************************Drop down menu with events and ticket quantity***********************************************************-->
 
-        <!--This is just the labels for the "Event and Details" drop down list and for the Ticket Quantity drop down list-->
-        <table style="margin-left: 20%;">
-            <tr id="eventTitle">
-                <td class="eventTitle" style="width: 603px; text-align: left;">Event and Details</td>
-                <td class="eventTitle"># of tickets</td>
-            </tr>
-        </table>
-
-        <!--drop down list that will accept xml content to display all houston events per radio button category-->
-        <div id="eventForm">
-            <asp:DropDownList ID="allEvents" runat="server" style="width: 56%; background-color: seashell; color: navy;">
-            </asp:DropDownList>
-
-            <!--asp drop down list to list the quantity of tickets the customer wishes to purchase-->
-            <asp:DropDownList ID="numOfTix" runat="server">
-                <asp:ListItem>1</asp:ListItem>
-                <asp:ListItem>2</asp:ListItem>
-                <asp:ListItem>3</asp:ListItem>
-                <asp:ListItem>4</asp:ListItem>
-                <asp:ListItem>5</asp:ListItem>
-                <asp:ListItem>6</asp:ListItem>
-                <asp:ListItem>7</asp:ListItem>
-                <asp:ListItem>8</asp:ListItem>
-                <asp:ListItem>9</asp:ListItem>
-                <asp:ListItem>10</asp:ListItem>
-                <asp:ListItem>11</asp:ListItem>
-                <asp:ListItem>12</asp:ListItem>
-                <asp:ListItem>13</asp:ListItem>
-                <asp:ListItem>14</asp:ListItem>
-                <asp:ListItem>15</asp:ListItem>
-            </asp:DropDownList>
-        </div>
-
-        <!--*****************************************************Ticket Owner and Address Input Form************************************************-->
-
-        <table id="HolderInfo">
-            <tr>
-                <td>Ticket Holder Name:</td>
-                <td><asp:TextBox runat="server" ID="ticketHolderName" style="margin-top: 4px"></asp:TextBox></td>
-                    <!--<input type="text" id="ticketHolderName" /></td>-->
-                <!--increases the size of the button to span two rows-->
-                <th rowspan="2">
-                    <!--asp button control used to called a JavaScript function to verify that all fields are filled out-->
-                    <asp:Button runat="server" ID="ticketBtn" Text="View Tickets" OnClientClick="verify(); return false" Height="56px" Width="150px"/>
-                </th>
-            </tr>
-            <tr>
-                <td>Ship Tickets To (Postal Address)</td>
-                <td>
-                    <!--asp Textbox control to hold the address for the ticket-->
-                    <asp:TextBox runat="server" ID="ticketAddress"></asp:TextBox>
-
-                </td>
-            </tr>
-        </table>
-
-        <br />
-        <br />
-
-        <!--**********************************************************Ticket Preview*************************************************************************-->
-        <div id="ticketPreview" style="width: 94%; margin-left: auto; margin-right: auto;">
-            <!--This is where I will show the customer his ticket and quantity-->
-            <h1 id="tickQty" style="text-align: center; float: right; font-size: 70px; color: red; margin-top: 0; margin-bottom: 0; margin: auto;"></h1>
-            <table id="ticketTable" style="margin-left: auto; margin-right: auto; border-spacing: 8px 2px;">
-                <tr id="ticketNumber">
-                    <th colspan="2" id="tickNum" style="text-align: center; font-family: Verdana; font-weight: bold; font-size: large; color: maroon;"></th>
-                </tr>
-                <!--end of row that will hold ticket number-->
-                <tr>
-                    <td id="nameTitle" style="text-align: left; font-weight: bold; font-family: Verdana,Arial; color: maroon; font-size: large; text-align: left;"></td>
-                    <td id="actualName" style="text-align: left; font-weight: bold; font-family: Verdana,Arial; color: maroon; font-size: large; text-align: left;"></td>
-                </tr>
-                <!--end of row with ticket holder name-->
-                <tr>
-                    <td id="addressTitle" style="text-align: left; font-weight: bold; font-family: Verdana,Arial; color: maroon; font-size: medium; text-align: left;"></td>
-                    <td id="actualAddr" style="text-align: left; font-weight: bold; font-family: Verdana,Arial; color: maroon; font-size: small; text-align: left;"></td>
-                </tr>
-                <!--end of row with address information-->
-                <tr>
-                    <td id="eventLbl" style="text-align: left; font-family: Verdana,Arial; font-weight: bold; color: maroon; font-size: small; text-align: left;"></td>
-                    <td id="eventDetails" style="text-align: left; font-weight: bold; font-family: Verdana,Arial; color: maroon; font-size: small; text-align: left;"></td>
-                </tr>
-                <!--end of row with event information-->
-                <tr>
-                    <th colspan="2" id="distributorMsg" style="font-style: italic; font-size: 16px; color: blue; font-family: 'Trebuchet MS'; text-align: center"></th>
+            <!--This is just the labels for the "Event and Details" drop down list and for the Ticket Quantity drop down list-->
+            <table style="margin-left: 20%;">
+                <tr id="eventTitle">
+                    <td class="eventTitle" style="width: 603px; text-align: left;">Event and Details</td>
+                    <td class="eventTitle"># of tickets</td>
                 </tr>
             </table>
-        </div>
-        <br />
-        <br />
 
-        <!--**********************************************************Ticket Preview*************************************************************************-->
-        <!--Payment radio buttons-->
-        <div id="paymentRadioBtn">
-            Payment Method:&nbsp&nbsp
+            <!--drop down list that will accept xml content to display all houston events per radio button category-->
+            <div id="eventForm">
+                <asp:DropDownList ID="allEvents" runat="server" Style="width: 56%; background-color: seashell; color: navy;">
+                </asp:DropDownList>
+
+                <!--asp drop down list to list the quantity of tickets the customer wishes to purchase-->
+                <asp:DropDownList ID="numOfTix" runat="server">
+                    <asp:ListItem Value="1"></asp:ListItem>
+                    <asp:ListItem Value="2"></asp:ListItem>
+                    <asp:ListItem Value="3"></asp:ListItem>
+                    <asp:ListItem Value="4"></asp:ListItem>
+                    <asp:ListItem Value="5"></asp:ListItem>
+                    <asp:ListItem Value="6"></asp:ListItem>
+                    <asp:ListItem Value="7"></asp:ListItem>
+                    <asp:ListItem Value="8"></asp:ListItem>
+                    <asp:ListItem Value="9"></asp:ListItem>
+                    <asp:ListItem Value="10"></asp:ListItem>
+                    <asp:ListItem Value="11"></asp:ListItem>
+                    <asp:ListItem Value="12"></asp:ListItem>
+                    <asp:ListItem Value="13"></asp:ListItem>
+                    <asp:ListItem Value="14"></asp:ListItem>
+                    <asp:ListItem Value="15"></asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <br />
+
+            <!--*****************************************************Ticket Owner and Address Input Form************************************************-->
+
+            <asp:Table runat="server" CssClass="HolderInfo">
+                <asp:TableRow>
+                    <asp:TableCell runat="server"><asp:Label runat="server" Text="Holder Name:"></asp:Label>
+                        <br />
+                        <asp:TextBox runat="server" ID="ticketHolderName"></asp:TextBox>
+                        <br />
+                        <asp:RequiredFieldValidator ID="ReqFldVal_Name" runat="server"
+                            ControlToValidate="ticketHolderName"
+                            Font-Name="'Arial Narrow'"
+                            ForeColor="Red"
+                            Font-Size="Medium"
+                            ErrorMessage="First name field is required.">
+                        </asp:RequiredFieldValidator>
+                        <br />
+                        <asp:RegularExpressionValidator ID="RegExpVal_fName" runat="server"
+                            ControlToValidate="ticketHolderName"
+                            Font-Name="'Arial Narrow'"
+                            ForeColor="Red"
+                            Font-Size="Medium"
+                            ErrorMessage="First name must contain only alphabetical characters. No symbols or numbers permitted."
+                            ValidationExpression="^[a-zA-Z''-'\s]{1,40}$">
+                        </asp:RegularExpressionValidator>
+                    </asp:TableCell>
+                    <asp:TableCell CssClass="headerCell">
+                        <%--<asp:Button runat="server" ID="ticketBtn" Text="View Tickets" OnClientClick="verify(); return false" Height="56px" Width="150px"/>--%>
+                        <asp:Button runat="server" ID="ticketBtn" Text="View Tickets" OnClientClick="verify(); return false" Height="56px" Width="150px" />
+                    </asp:TableCell>
+                </asp:TableRow>
+                <asp:TableRow>
+                    <asp:TableCell runat="server"><asp:Label runat="server" Text="Tickets To (Postal Address)"></asp:Label>
+                        <!--asp Textbox control to hold the address for the ticket-->
+                        <asp:TextBox runat="server" ID="ticketAddress"></asp:TextBox>
+                        <br />
+                        <asp:RequiredFieldValidator ID="ReqFldVal_AddrMainPg" runat="server"
+                            ControlToValidate="ticketAddress"
+                            Font-Name="'Arial Narrow'"
+                            ForeColor="Red"
+                            Font-Size="Medium"
+                            ErrorMessage="Street address is required!">
+                        </asp:RequiredFieldValidator>
+
+                        <br />
+
+                        <asp:RegularExpressionValidator ID="RegExpVal_AddrMainPg" runat="server"
+                            ControlToValidate="ticketAddress"
+                            Font-Name="'Arial Narrow'"
+                            ForeColor="Red"
+                            Font-Size="Medium"
+                            ErrorMessage="Not a valid street address"
+                            ValidationExpression="[A-Za-z0-9\'\.\-\,\#?\s]{2,70}$">
+                        </asp:RegularExpressionValidator>
+
+                    </asp:TableCell>
+                </asp:TableRow>
+            </asp:Table>
+
+            <br />
+            <br />
+
+            <!--**********************************************************Ticket Preview*************************************************************************-->
+            <div id="ticketPreview" style="width: 94%; margin-left: auto; margin-right: auto;">
+                <!--This is where I will show the customer his ticket and quantity-->
+                <h1 id="tickQty" style="text-align: center; float: right; font-size: 70px; color: red; margin-top: 0; margin-bottom: 0; margin: auto;"></h1>
+                <table id="ticketTable" style="margin-left: auto; margin-right: auto; border-spacing: 8px 2px;">
+                    <tr id="ticketNumber">
+                        <th colspan="2" id="tickNum" style="text-align: center; font-family: Verdana; font-weight: bold; font-size: large; color: maroon;"></th>
+                    </tr>
+                    <!--end of row that will hold ticket number-->
+                    <tr>
+                        <td id="nameTitle" style="text-align: left; font-weight: bold; font-family: Verdana,Arial; color: maroon; font-size: large; text-align: left;"></td>
+                        <td id="actualName" style="text-align: left; font-weight: bold; font-family: Verdana,Arial; color: maroon; font-size: large; text-align: left;"></td>
+                    </tr>
+                    <!--end of row with ticket holder name-->
+                    <tr>
+                        <td id="addressTitle" style="text-align: left; font-weight: bold; font-family: Verdana,Arial; color: maroon; font-size: medium; text-align: left;"></td>
+                        <td id="actualAddr" style="text-align: left; font-weight: bold; font-family: Verdana,Arial; color: maroon; font-size: small; text-align: left;"></td>
+                    </tr>
+                    <!--end of row with address information-->
+                    <tr>
+                        <td id="eventLbl" style="text-align: left; font-family: Verdana,Arial; font-weight: bold; color: maroon; font-size: small; text-align: left;"></td>
+                        <td id="eventDetails" style="text-align: left; font-weight: bold; font-family: Verdana,Arial; color: maroon; font-size: small; text-align: left;"></td>
+                    </tr>
+                    <!--end of row with event information-->
+                    <tr>
+                        <th colspan="2" id="distributorMsg" style="font-style: italic; font-size: 16px; color: blue; font-family: 'Trebuchet MS'; text-align: center"></th>
+                    </tr>
+                </table>
+            </div>
+            <br />
+            <br />
+
+            <!--**********************************************************Ticket Preview*************************************************************************-->
+            <!--Payment radio buttons-->
+            <div id="paymentRadioBtn">
+                Payment Method:&nbsp&nbsp
             <!--asp radio buttons used for the selection of Payment Type-->
-            <asp:RadioButton GroupName="payType" Text="VISA" Checked="true" runat="server" />&nbsp&nbsp
-            <asp:RadioButton GroupName="payType" Text="Master" runat="server" />&nbsp&nbsp
-            <asp:RadioButton GroupName="payType" Text="PayPal" runat="server" />
-        </div>
+                <asp:RadioButton GroupName="payType" ID="rdoVisa" Text="VISA" Checked="true" runat="server" />&nbsp&nbsp
+            <asp:RadioButton GroupName="payType" ID="rdoMaster" Text="Master" runat="server" />&nbsp&nbsp
+            <asp:RadioButton GroupName="payType" ID="rdoPayPal" Text="PayPal" runat="server" />
+            </div>
 
-        <!--Account number input field-->
-        <div id="accountNum">
-            Account Number:&nbsp&nbsp&nbsp&nbsp
+            <!--Account number input field-->
+            <div id="accountNum">
+                Account Number:&nbsp&nbsp&nbsp&nbsp
             <asp:TextBox runat="server" ID="acctNum"></asp:TextBox>
-            <!--<input type="text" name="accountNum" id="acctNum" />-->
+                <br />
+                <asp:RequiredFieldValidator ID="ReqFldVal_acctNum" runat="server"
+                    ControlToValidate="acctNum"
+                    Font-Name="'Arial Narrow'"
+                    ForeColor="Red"
+                    Font-Size="Medium"
+                    ErrorMessage="Street address is required!">
+                </asp:RequiredFieldValidator>
+
+                <!--<input type="text" name="accountNum" id="acctNum" />-->
+            </div>
+
+            <p id="shipNote">Important: Tickets will be shipped to the address shown on the ticket</p>
+
+            <div>
+                <!--final submit/complete transaction button-->
+                <%--OnClick="completeBtnClick"--%>
+                <%--OnClientClick="if (!acctNumValidate()) { return false;};"--%>
+                <%--PostBackUrl="~/SuccessMsg.aspx"--%>
+                <asp:Button runat="server" ID="completeBtn" Style="height: 35px"
+                    OnClick="completeBtnEvent"
+                    Text="Complete Transaction" />
+
+                <!--<button type="button" id="completeBtn" onclick="acctNumValidate();" style="height: 35px">Complete Transaction</button>-->
+            </div>
+            <br />
+            <br />
+
+            <script type="text/javascript">
+                //validate multiple possibilities for the input fields
+                function acctNumValidate() {
+
+                    //if ticket owner empty and address empty and account num empty
+                    if ((document.getElementById("ticketHolderName").value == "") & (document.getElementById("ticketAddress").value == "") & (document.getElementById("acctNum").value == "")) {
+                        alert("All fields must be filled out to complete transaction");
+                        //return;
+                    }
+                        //if ticket owner not empty and address empty and acct num not empty
+                    else if ((document.getElementById("ticketHolderName").value != "") & (document.getElementById("ticketAddress").value == "") & (document.getElementById("acctNum").value != "")) {
+                        alert("Enter an address");
+                        //return;
+                    }
+                    else if ((document.getElementById("ticketHolderName").value != "") & (document.getElementById("ticketAddress").value == "") & (document.getElementById("acctNum").value == "")) {
+                        alert("Enter an address and an account number");
+                        //return;
+                    }
+                    else if ((document.getElementById("ticketHolderName").value == "") & (document.getElementById("ticketAddress").value != "") & (document.getElementById("acctNum").value == "")) {
+                        alert("Enter a ticket owner name and an account number");
+                        //return;
+                    }
+                        //if ticket owner empty and address empty and acct num not empty
+                    else if ((document.getElementById("ticketHolderName").value == "") & (document.getElementById("ticketAddress").value == "") & (document.getElementById("acctNum").value != "")) {
+                        alert("Enter a ticket owner name and an address");
+                        //return;
+                    }
+                        //if account num is empty and ticket owner not empty and address not empty
+                    else if ((document.getElementById("acctNum").value == "") & (document.getElementById("ticketHolderName").value != "") & (document.getElementById("ticketAddress").value != "")) {
+                        alert("Enter an account number");
+                        // return;
+                    }
+                    else if ((document.getElementById("ticketHolderName").value == "") & (document.getElementById("ticketAddress").value != "") & (document.getElementById("acctNum").value != "")) {
+                        alert("Enter a ticket owner name");
+                        //return;
+                    }
+                    return;
+
+                }
+            </script>
+
         </div>
-
-        <p id="shipNote">Important: Tickets will be shipped to the address shown on the ticket</p>
-
-        <div>
-            <!--final submit/complete transaction button-->
-            <asp:Button runat="server" ID="completeBtn" style="height: 35px" OnClientClick="acctNumValidate(); return false" Text="Complete Transaction"/>
-            <!--<button type="button" id="completeBtn" onclick="acctNumValidate();" style="height: 35px">Complete Transaction</button>-->
-        </div>
-
-        <script type="text/javascript">
-            //validate multiple possibilities for the input fields
-            function acctNumValidate() {
-
-                //if ticket owner empty and address empty and account num empty
-                if ((document.getElementById("ticketHolderName").value == "") & (document.getElementById("ticketAddress").value == "") & (document.getElementById("acctNum").value == "")) {
-                    alert("All fields must be filled out to complete transaction");
-                }
-                    //if ticket owner not empty and address empty and acct num not empty
-                else if ((document.getElementById("ticketHolderName").value != "") & (document.getElementById("ticketAddress").value == "") & (document.getElementById("acctNum").value != "")) {
-                    alert("Enter an address");
-                }
-                else if ((document.getElementById("ticketHolderName").value != "") & (document.getElementById("ticketAddress").value == "") & (document.getElementById("acctNum").value == "")) {
-                    alert("Enter an address and an account number");
-                }
-                else if ((document.getElementById("ticketHolderName").value == "") & (document.getElementById("ticketAddress").value != "") & (document.getElementById("acctNum").value == "")) {
-                    alert("Enter a ticket owner name and an account number");
-                }
-                    //if ticket owner empty and address empty and acct num not empty
-                else if ((document.getElementById("ticketHolderName").value == "") & (document.getElementById("ticketAddress").value == "") & (document.getElementById("acctNum").value != "")) {
-                    alert("Enter a ticket owner name and an address");
-                }
-                    //if account num is empty and ticket owner not empty and address not empty
-                else if ((document.getElementById("acctNum").value == "") & (document.getElementById("ticketHolderName").value != "") & (document.getElementById("ticketAddress").value != "")) {
-                    alert("Enter an account number");
-                }
-                else if ((document.getElementById("ticketHolderName").value == "") & (document.getElementById("ticketAddress").value != "") & (document.getElementById("acctNum").value != "")) {
-                    alert("Enter a ticket owner name");
-                }
-                else
-                    successMsg(); //if all fields are filled, call successMsg JavaScript function
-            }
-
-            //function to generate the successfull transaction message to the user
-            function successMsg() {
-                //code to add a border to a div element
-                document.getElementById("successMsg").style.border = "medium solid navy";//set the border to medium thickness, solid line, and navy color
-
-                /*inserting text for each line in the div tag*/
-                document.getElementById("thankYou").innerHTML = "Thank you for your business.";
-                document.getElementById("tickMsg").innerHTML = "Your tickets will be shipped to the address entered above within 5 business days.";
-                document.getElementById("print").innerHTML = "Please print this page as your receipt";
-                document.getElementById("enjoy").innerHTML = "Enjoy the Event!";
-            }
-
-        </script>
-        <br />
-        <!--This is the area where the transaction success message is going to be inserted-->
-        <div id="successMsg" style="margin-bottom: 3px; margin-top: 3px; width: 64%; margin-left: auto; margin-right: auto;">
-            <p id="thankYou" style="margin-bottom: 3px; margin-top: 0; color: blue; font-family: Arial; font-weight: bold; font-size: medium;"></p>
-            <p id="tickMsg" style="margin-bottom: 3px; margin-top: 0; color: maroon; font-family: Arial; font-weight: bold; font-size: medium;"></p>
-            <p id="print" style="margin-bottom: 3px; margin-top: 0; color: red; font-family: Arial; font-weight: bold; font-size: medium;"></p>
-            <p id="enjoy" style="margin-bottom: 3px; margin-top: 0; color: blue; font-family: Arial; font-weight: bold; font-size: medium;"></p>
-        </div>
-    </div>
 
         <!--closing tag for the form that must be run at the server-->
     </form>

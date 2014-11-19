@@ -81,6 +81,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PasswordRecover.aspx.cs">
       <DependentUpon>PasswordRecover.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -96,13 +103,6 @@
       <DependentUpon>SuccessMsg.aspx</DependentUpon>
     </Compile>
     <Compile Include="Transaction.cs" />
-    <Compile Include="Main.aspx.cs">
-      <DependentUpon>Main.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Main.aspx.designer.cs">
-      <DependentUpon>Main.aspx</DependentUpon>
-    </Compile>
     <Compile Include="NewMember.aspx.cs">
       <DependentUpon>NewMember.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

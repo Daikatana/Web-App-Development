@@ -75,6 +75,24 @@ public partial class Main {
     protected global::System.Web.UI.WebControls.TextBox ticketHolderName;
     
     /// <summary>
+    /// ReqFldVal_Name control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqFldVal_Name;
+    
+    /// <summary>
+    /// RegExpVal_fName control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RegularExpressionValidator RegExpVal_fName;
+    
+    /// <summary>
     /// ticketBtn control.
     /// </summary>
     /// <remarks>
@@ -93,31 +111,49 @@ public partial class Main {
     protected global::System.Web.UI.WebControls.TextBox ticketAddress;
     
     /// <summary>
-    /// RadioButton1 control.
+    /// ReqFldVal_AddrMainPg control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqFldVal_AddrMainPg;
     
     /// <summary>
-    /// RadioButton2 control.
+    /// RegExpVal_AddrMainPg control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.RadioButton RadioButton2;
+    protected global::System.Web.UI.WebControls.RegularExpressionValidator RegExpVal_AddrMainPg;
     
     /// <summary>
-    /// RadioButton3 control.
+    /// rdoVisa control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.RadioButton RadioButton3;
+    protected global::System.Web.UI.WebControls.RadioButton rdoVisa;
+    
+    /// <summary>
+    /// rdoMaster control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RadioButton rdoMaster;
+    
+    /// <summary>
+    /// rdoPayPal control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RadioButton rdoPayPal;
     
     /// <summary>
     /// acctNum control.
@@ -127,6 +163,15 @@ public partial class Main {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.TextBox acctNum;
+    
+    /// <summary>
+    /// ReqFldVal_acctNum control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqFldVal_acctNum;
     
     /// <summary>
     /// completeBtn control.
