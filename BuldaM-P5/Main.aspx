@@ -13,6 +13,7 @@
     Date:           October 30, 2014
 
     Assignment:     Program 4 - Phase II of Semester Project: Control Conversion
+                    Now part of program assignment 5
 
     Environment:    Windows 8.1, Visual Studio 2012
 

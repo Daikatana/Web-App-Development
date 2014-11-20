@@ -1,4 +1,33 @@
-﻿<%@ Page Language="C#" AutoEventWireup="True" Inherits="DefaultPage" CodeBehind="Default.aspx.cs" %>
+﻿<!--
+    *************************************************************************************************************
+
+    Programmer:     Michael Bulda
+
+    Course:         CINF 4320.05
+
+    Date:           November 20, 2014
+
+    Assignment:     Program 5 - Phase III of Semester Project: New Forms and Validation
+
+    Environment:    Windows 8.1, Visual Studio 2012
+
+    Files Included: Default.aspx, SportsEvents.xml, ConcertEvents.xml, MyStyle.css, images folder with one banner image
+                    NewMember.aspx, Main.aspx, SuccessMsg.aspx, and relevant code-behind files
+
+    Purpose:        To create an entry point into the site for the user.
+
+    Input:          Mouse, keyboard
+
+    Pre-Condition:  A clean layout which allows users to easily identify a purpose for each of the elements on the page.
+                    Sufficient input validation is required to display the correct results to user.
+
+    Output:         A website that has a functional drop-down list, input fields and submission buttons.
+    
+    *************************************************************************************************************
+-->
+
+
+<%@ Page Language="C#" AutoEventWireup="True" Inherits="DefaultPage" CodeBehind="Default.aspx.cs" %>
 
 <!DOCTYPE html>
 
@@ -51,6 +80,7 @@
                         <br />
                         <asp:TextBox ID="txtEmailDefaultPg" runat="server"></asp:TextBox>
                         <br />
+                        <%--Input validation for email textbox--%>
                         <asp:RegularExpressionValidator ID="RegExpVal_Email" runat="server"
                             ControlToValidate="txtEmailDefaultPg"
                             Font-Name="'Arial Narrow'"
@@ -66,6 +96,7 @@
                         <br />
                         <asp:Label ID="Label1" runat="server" Text="6-20 characters (alphanumeric)"></asp:Label>
                         <br />
+                        <%--Input validation for password textbox--%>
                         <asp:RegularExpressionValidator ID="RegExpVal_txtPwd" runat="server"
                             ControlToValidate="txtPwdDefaultPg"
                             Font-Name="'Arial Narrow'"

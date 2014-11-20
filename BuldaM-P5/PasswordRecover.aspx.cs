@@ -11,7 +11,8 @@ using System.Web.UI.WebControls;
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ReqFldVal_EmailRecover.Enabled = true;
+            ReqFldVal_EmailRecoverReenter.Enabled = true;
         }
         protected void btnRecoverPwd_Click(object sender, EventArgs e)
         {
@@ -55,7 +56,7 @@ using System.Web.UI.WebControls;
         }
 
         protected void ReturnToDefault_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/Default.aspx");
+        {     
+                Response.Redirect("~/Default.aspx");
         }
     }

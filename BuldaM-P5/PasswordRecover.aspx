@@ -56,6 +56,7 @@
                 <asp:TableCell>
                     <asp:TextBox ID="txtEmailRecover" runat="server"></asp:TextBox>
                     <br />
+                    <%--Input validation for email texbox--%>
                         <asp:RequiredFieldValidator ID="ReqFldVal_EmailRecover" runat="server"
                             ControlToValidate="txtEmailRecover"
                             Font-Name="'Arial Narrow'"
@@ -77,6 +78,7 @@
                     <br />        
                         <asp:TextBox ID="txtEmailRecoverReenter" runat="server"></asp:TextBox>
                     <br />
+                    <%--Input validation for email recover texbox--%>
                         <asp:RequiredFieldValidator ID="ReqFldVal_EmailRecoverReenter" runat="server"
                             ControlToValidate="txtEmailRecoverReenter"
                             Font-Name="'Arial Narrow'"
@@ -109,9 +111,9 @@
                 </asp:TableCell>
             </asp:TableRow>
             </asp:Table>
-
-        <asp:Panel ID="Panel1" runat="server">
-            <asp:Label runat="server" ID="pwdConfirmMsg" Style="height: 35px" /><br />
+        <br />
+        <asp:Panel ID="Panel1" CssClass="plainPanel" runat="server">
+            <asp:Label runat="server" ID="pwdConfirmMsg" CssClass="passwdRecover" Style="height: 35px" /><br />
             <%--This is a placeholder for the customer's password when the correct email address is entered--%>
             <asp:Button runat="server" Text="OK" ID="btnReturnToDefault" CssClass="Button" OnClick="ReturnToDefault_Click"/>
         </asp:Panel>

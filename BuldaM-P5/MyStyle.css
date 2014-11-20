@@ -26,6 +26,15 @@ div.bannerTitle {
     margin-right:60%;
 }
 
+.passwdRecover {
+    background-color:orange;
+    margin:auto;
+    text-align:center;
+    color:royalblue;
+    font-size:x-large;
+    font-weight: bold;
+}
+
 
 .thankYou {
     margin-bottom: 3px; margin-top: 0; color: blue; font-family: Arial; font-weight: bold; font-size: medium;
@@ -110,6 +119,13 @@ div.formContainer {
     background-color: lightcyan;
 }
 
+
+.plainPanel {    
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /*Style for the radio option text for ticket type*/
 #ticketRadioBtn {
     font-size: x-large;
@@ -124,6 +140,7 @@ div.formContainer {
     font-size:medium;
     color: white;
     box-shadow:initial;
+    margin:auto;
 }
 
 /*Style for radio button option of payment type*/
