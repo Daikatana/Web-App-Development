@@ -11,7 +11,7 @@ public partial class DefaultPage : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         //this.Form.Target = "_blank";
-       
+
     }
 
     protected void btnRegister_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ public partial class DefaultPage : System.Web.UI.Page
                     Response.Write(@"<script language='javascript'>alert('Login failed! Unable to locate email/password.');</script>");
                 }
             }
-            
+
         }
         else
         {

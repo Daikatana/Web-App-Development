@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
+using System.Web.UI;
 
 namespace BuldaM_P5.App_Code
 {
@@ -13,11 +14,12 @@ namespace BuldaM_P5.App_Code
 
         protected void Application_Start(object sender, EventArgs e)
         {
+            //ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
             //ArrayList CustomerLst = new ArrayList();
             //Customer customerObj = new Customer();
             Application["CustomerList"] = new ArrayList();
             Application["TransactionList"] = new ArrayList();
-
+            
         }
 
         protected void Session_Start(object sender, EventArgs e)

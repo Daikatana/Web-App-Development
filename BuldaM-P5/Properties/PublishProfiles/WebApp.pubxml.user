@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAT3MDK8rWp0eMB7OT2Dq22gAAAAACAAAAAAAQZgAAAAEAACAAAABZEUlL6Izc2RkleruHq5F/+sE7EEb6oY9mR1WU7Yp2igAAAAAOgAAAAAIAACAAAAAQ6piDVcjyS+JHLZ1XVUF+BZu3T4yqvnN+MTRwH5ltShAAAAA8LJbDcRK1daLfKyH/nYvCQAAAACwoLQoLs8ypkkZQQ5KGqIqo0d6IqzeyKgxrU8lAIq0ARER2/0LvSw/NDfZl19a9mn1lDVCSTFTtmgcQyv2PeHM=</EncryptedPassword>
+    <_PublishTargetUrl>ftp://dcm.uhcl.edu/c432014fa05buldam</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Code/Global.asax">
+      <publishTime>11/17/2014 16:39:46</publishTime>
+    </File>
+    <File Include="bin/BuldaM-P5.dll">
+      <publishTime>11/20/2014 18:44:25</publishTime>
+    </File>
+    <File Include="ConcertEvents.xml">
+      <publishTime>11/17/2014 16:39:46</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>11/20/2014 18:26:31</publishTime>
+    </File>
+    <File Include="images/HoustonSkyline2.jpg">
+      <publishTime>11/17/2014 16:39:47</publishTime>
+    </File>
+    <File Include="Main.aspx">
+      <publishTime>11/20/2014 15:07:13</publishTime>
+    </File>
+    <File Include="MyStyle.css">
+      <publishTime>11/20/2014 15:55:34</publishTime>
+    </File>
+    <File Include="NewMember.aspx">
+      <publishTime>11/20/2014 15:59:30</publishTime>
+    </File>
+    <File Include="PasswordRecover.aspx">
+      <publishTime>11/20/2014 15:44:18</publishTime>
+    </File>
+    <File Include="SportsEvents.xml">
+      <publishTime>11/17/2014 16:39:46</publishTime>
+    </File>
+    <File Include="SuccessMsg.aspx">
+      <publishTime>11/19/2014 14:08:28</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/20/2014 18:44:27</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
