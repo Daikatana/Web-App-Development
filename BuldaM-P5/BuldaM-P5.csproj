@@ -58,9 +58,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Code\Global.asax" />
+    <Content Include="BannerControl.ascx" />
     <Content Include="ConcertEvents.xml" />
+    <Content Include="images\amazonlogo.jpg" />
+    <Content Include="images\AMDlogo.jpg" />
+    <Content Include="images\BarnesAndNobleLogo.png" />
+    <Content Include="images\dellLogo.jpg" />
+    <Content Include="images\ebaylogo.jpg" />
+    <Content Include="images\expedialogo.jpg" />
+    <Content Include="images\FrysLogo.png" />
+    <Content Include="images\HomeDepotLogo.jpg" />
     <Content Include="images\HoustonSkyline2.jpg" />
+    <Content Include="images\MicrosoftLogo.png" />
+    <Content Include="images\newegglogo.png" />
+    <Content Include="images\thinkgeeklogo.jpg" />
+    <Content Include="images\ToyotaLogo.jpg" />
+    <Content Include="images\WalmartLogo.jpg" />
     <Content Include="Main.aspx" />
+    <Content Include="MainAds.xml" />
     <Content Include="MyStyle.css" />
     <Content Include="NewMember.aspx" />
     <Content Include="PasswordRecover.aspx" />
@@ -72,6 +87,13 @@
   <ItemGroup>
     <Compile Include="App_Code\Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="BannerControl.ascx.cs">
+      <DependentUpon>BannerControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BannerControl.ascx.designer.cs">
+      <DependentUpon>BannerControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
     <Compile Include="Main.aspx.cs">

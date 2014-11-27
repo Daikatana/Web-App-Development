@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+
+  <Ad>
+    <ImageUrl>msasp.gif</ImageUrl>
+    <Width>200</Width>
+    <Height>75</Height>
+    <NavigateUrl>http://www.microsoft.com</NavigateUrl>
+    <AlternateText>Microsoft</AlternateText>
+    <Impressions>10</Impressions>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>~/images/AMDlogo.jpg</ImageUrl>
+    <Width>200</Width>
+    <Height>75</Height>
+    <NavigateUrl>http://www.amd.com</NavigateUrl>
+    <AlternateText>AMD Home Page</AlternateText>
+    <Impressions>10</Impressions>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>~/images/newegglogo.png</ImageUrl>
+    <Width>200</Width>
+    <Height>75</Height>
+    <NavigateUrl>http://www.newegg.com</NavigateUrl>
+    <AlternateText>Newegg Home Page</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>small</Keyword>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>~/images/dellLogo.jpg</ImageUrl>
+    <Width>200</Width>
+    <Height>75</Height>
+    <NavigateUrl>http://www.dell.com</NavigateUrl>
+    <AlternateText>AMD Home Page</AlternateText>
+    <Impressions>10</Impressions>
+  </Ad>
+  
+  <Ad>
+    <ImageUrl>~/images/BarnesAndNobleLogo.png</ImageUrl>
+    <Width>200</Width>
+    <Height>75</Height>
+    <NavigateUrl>http://www.barnesandnoble.com</NavigateUrl>
+    <AlternateText>Barnes and Noble Home Page</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>small</Keyword>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>~/images/expedialogo.jpg</ImageUrl>
+    <Width>200</Width>
+    <Height>75</Height>
+    <NavigateUrl>http://www.expedia.com</NavigateUrl>
+    <AlternateText>Expedia Home Page</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>small</Keyword>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>~/images/amazonlogo.jpg</ImageUrl>
+    <Width>200</Width>
+    <Height>75</Height>
+    <NavigateUrl>http://www.amazon.com</NavigateUrl>
+    <AlternateText>Amazon Home Page</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>small</Keyword>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>~/images/thinkgeeklogo.jpg</ImageUrl>
+    <Width>200</Width>
+    <Height>75</Height>
+    <NavigateUrl>http://www.thinkgeek.com</NavigateUrl>
+    <AlternateText>ThinkGeek Home Page</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>small</Keyword>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>~/images/ToyotaLogo.jpg</ImageUrl>
+    <Width>200</Width>
+    <Height>75</Height>
+    <NavigateUrl>http://www.toyota.com</NavigateUrl>
+    <AlternateText>Toyota Home Page</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>small</Keyword>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>~/images/MicrosoftLogo.png</ImageUrl>
+    <Width>200</Width>
+    <Height>75</Height>
+    <NavigateUrl>http://www.microsoft.com</NavigateUrl>
+    <AlternateText>Microsoft Home Page</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>small</Keyword>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>~/images/FrysLogo.png</ImageUrl>
+    <Width>200</Width>
+    <Height>75</Height>
+    <NavigateUrl>http://www.frys.com</NavigateUrl>
+    <AlternateText>Fry's Home Page</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>small</Keyword>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>~/images/WalmartLogo.jpg</ImageUrl>
+    <Width>200</Width>
+    <Height>75</Height>
+    <NavigateUrl>http://www.walmart.com</NavigateUrl>
+    <AlternateText>Walmart Home Page</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>small</Keyword>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>~/images/HomeDepotLogo.jpg</ImageUrl>
+    <Width>200</Width>
+    <Height>75</Height>
+    <NavigateUrl>http://www.walmart.com</NavigateUrl>
+    <AlternateText>Walmart Home Page</AlternateText>
+    <Impressions>10</Impressions>
+    <Keyword>small</Keyword>
+  </Ad>
+
+</Advertisements>

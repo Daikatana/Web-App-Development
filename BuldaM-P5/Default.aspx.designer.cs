@@ -9,9 +9,8 @@
 
 
 
-public partial class DefaultPage
-{
-
+public partial class DefaultPage {
+    
     /// <summary>
     /// Head1 control.
     /// </summary>
@@ -20,7 +19,7 @@ public partial class DefaultPage
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
-
+    
     /// <summary>
     /// memberForm control.
     /// </summary>
@@ -29,16 +28,7 @@ public partial class DefaultPage
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.HtmlControls.HtmlForm memberForm;
-
-    /// <summary>
-    /// Panel1 control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.Panel Panel1;
-
+    
     /// <summary>
     /// LoginInfo control.
     /// </summary>
@@ -47,7 +37,7 @@ public partial class DefaultPage
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.Table LoginInfo;
-
+    
     /// <summary>
     /// TableCell1 control.
     /// </summary>
@@ -56,7 +46,7 @@ public partial class DefaultPage
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.TableCell TableCell1;
-
+    
     /// <summary>
     /// Label1 control.
     /// </summary>
@@ -65,7 +55,7 @@ public partial class DefaultPage
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.Label Label1;
-
+    
     /// <summary>
     /// Label2 control.
     /// </summary>
@@ -74,7 +64,7 @@ public partial class DefaultPage
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.Label Label2;
-
+    
     /// <summary>
     /// txtEmailDefaultPg control.
     /// </summary>
@@ -83,7 +73,7 @@ public partial class DefaultPage
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.TextBox txtEmailDefaultPg;
-
+    
     /// <summary>
     /// RegExpVal_Email control.
     /// </summary>
@@ -92,7 +82,7 @@ public partial class DefaultPage
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.RegularExpressionValidator RegExpVal_Email;
-
+    
     /// <summary>
     /// Label3 control.
     /// </summary>
@@ -101,7 +91,7 @@ public partial class DefaultPage
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.Label Label3;
-
+    
     /// <summary>
     /// txtPwdDefaultPg control.
     /// </summary>
@@ -110,7 +100,7 @@ public partial class DefaultPage
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.TextBox txtPwdDefaultPg;
-
+    
     /// <summary>
     /// Label4 control.
     /// </summary>
@@ -119,7 +109,7 @@ public partial class DefaultPage
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.Label Label4;
-
+    
     /// <summary>
     /// RegExpVal_txtPwd control.
     /// </summary>
@@ -128,7 +118,7 @@ public partial class DefaultPage
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.RegularExpressionValidator RegExpVal_txtPwd;
-
+    
     /// <summary>
     /// btnSignIn control.
     /// </summary>
@@ -137,7 +127,7 @@ public partial class DefaultPage
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.Button btnSignIn;
-
+    
     /// <summary>
     /// HyperLink1 control.
     /// </summary>
@@ -146,7 +136,7 @@ public partial class DefaultPage
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
-
+    
     /// <summary>
     /// TableCell2 control.
     /// </summary>
@@ -155,7 +145,7 @@ public partial class DefaultPage
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.TableCell TableCell2;
-
+    
     /// <summary>
     /// Label5 control.
     /// </summary>
@@ -164,7 +154,7 @@ public partial class DefaultPage
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.Label Label5;
-
+    
     /// <summary>
     /// Label6 control.
     /// </summary>
@@ -173,7 +163,7 @@ public partial class DefaultPage
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.Label Label6;
-
+    
     /// <summary>
     /// btnRegister control.
     /// </summary>
@@ -182,4 +172,67 @@ public partial class DefaultPage
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.Button btnRegister;
+    
+    /// <summary>
+    /// ScriptManager1 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.ScriptManager ScriptManager1;
+    
+    /// <summary>
+    /// Timer1 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.Timer Timer1;
+    
+    /// <summary>
+    /// up1 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.UpdatePanel up1;
+    
+    /// <summary>
+    /// AdRotator1 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.AdRotator AdRotator1;
+    
+    /// <summary>
+    /// AdRotator2 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.AdRotator AdRotator2;
+    
+    /// <summary>
+    /// AdRotator3 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.AdRotator AdRotator3;
+    
+    /// <summary>
+    /// AdRotator4 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.AdRotator AdRotator4;
 }
