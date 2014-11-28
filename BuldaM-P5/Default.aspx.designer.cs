@@ -21,6 +21,15 @@ public partial class DefaultPage {
     protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
     
     /// <summary>
+    /// Header1 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::BannerControl Header1;
+    
+    /// <summary>
     /// memberForm control.
     /// </summary>
     /// <remarks>
