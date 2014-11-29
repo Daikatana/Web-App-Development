@@ -357,7 +357,7 @@
                         </asp:Label>
                     </asp:TableCell>
                     <asp:TableCell>
-                        <asp:Label Text="Phone (E.g. (281) 467-9581)" runat="server" Enabled="false">
+                        <asp:Label Text="Phone (E.g. 2814679581)" runat="server" Enabled="false">
                         </asp:Label>
                     </asp:TableCell>
                 </asp:TableRow>
