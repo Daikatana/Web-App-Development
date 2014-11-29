@@ -133,10 +133,15 @@
 
     <%--This is the user control to load the banner--%>
     <Banner:BannerControl id="Header1" runat="server"></Banner:BannerControl>
+    
 
     <!--create a form to run serverside-->
     <form id="serverForm" runat="server">
+        
         <div class="formContainer">
+            <br />
+    <asp:Button runat="server" ID="btnExistingOrder" Text="View Existing Order" CssClass="Button"/>
+    <br />
             <!--Radio button information-->
             <div id="ticketRadioBtn">
                 Select ticket type:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
@@ -188,7 +193,7 @@
                 <asp:TableRow>
                     <asp:TableCell runat="server"><asp:Label runat="server" Text="Holder Name:"></asp:Label>
                         <br />
-                        <asp:TextBox runat="server" ID="ticketHolderName"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="ticketHolderName" Text="Jimmy Bob"></asp:TextBox>
                         <br />
                         <asp:RequiredFieldValidator ID="ReqFldVal_Name" runat="server"
                             ControlToValidate="ticketHolderName"
@@ -215,7 +220,7 @@
                 <asp:TableRow>
                     <asp:TableCell runat="server"><asp:Label runat="server" Text="Tickets To (Postal Address)"></asp:Label>
                         <!--asp Textbox control to hold the address for the ticket-->
-                        <asp:TextBox runat="server" ID="ticketAddress"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="ticketAddress" Text="123 Sample Street, Sample City, TX 77510"></asp:TextBox>
                         <br />
                         <asp:RequiredFieldValidator ID="ReqFldVal_AddrMainPg" runat="server"
                             ControlToValidate="ticketAddress"
@@ -288,7 +293,7 @@
             <!--Account number input field-->
             <div id="accountNum">
                 Account Number:&nbsp&nbsp&nbsp&nbsp
-            <asp:TextBox runat="server" ID="acctNum"></asp:TextBox>
+            <asp:TextBox runat="server" ID="acctNum" Text="1111111111"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="ReqFldVal_acctNum" runat="server"
                     ControlToValidate="acctNum"

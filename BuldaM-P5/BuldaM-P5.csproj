@@ -60,6 +60,7 @@
     <Content Include="App_Code\Global.asax" />
     <Content Include="BannerControl.ascx" />
     <Content Include="ConcertEvents.xml" />
+    <Content Include="ExistingOrder.aspx" />
     <Content Include="images\amazonlogo.jpg" />
     <Content Include="images\AMDlogo.jpg" />
     <Content Include="images\BarnesAndNobleLogo.png" />
@@ -81,7 +82,10 @@
     <Content Include="PasswordRecover.aspx" />
     <Content Include="SportsEvents.xml" />
     <Content Include="SuccessMsg.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="TicketRetrieval.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Default.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +100,13 @@
       <DependentUpon>BannerControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
+    <Compile Include="ExistingOrder.aspx.cs">
+      <DependentUpon>ExistingOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExistingOrder.aspx.designer.cs">
+      <DependentUpon>ExistingOrder.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -116,6 +127,13 @@
     </Compile>
     <Compile Include="SuccessMsg.aspx.designer.cs">
       <DependentUpon>SuccessMsg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TicketRetrieval.aspx.cs">
+      <DependentUpon>TicketRetrieval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TicketRetrieval.aspx.designer.cs">
+      <DependentUpon>TicketRetrieval.aspx</DependentUpon>
     </Compile>
     <Compile Include="Transaction.cs" />
     <Compile Include="NewMember.aspx.cs">
