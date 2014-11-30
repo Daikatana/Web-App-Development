@@ -12,38 +12,6 @@ public partial class Main : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
-        //if (Page.IsPostBack)
-        //{
-        //    string functionName = Request.Params["__EVENTTARGET"];
-        //    object functObj = Request.Params["__EVENTOBJECT"];
-        //    //String argument = Request.Params["__EVENTARGUMENT"];
-        //    if (functionName == "completeBtnEvent")
-        //    {
-        //        completeBtnEvent(functObj);
-        //    }
-        //}
-
-
-//        String script = @"<script language=""Javascript"">
-//                        function verify() {
-//            
-//            if ((document.getElementById('ticketHolderName').value == '') & (document.getElementById('ticketAddress').value != '')) {
-//                alert('Enter a ticket owner\'s name');
-//            }
-//            else if ((document.getElementById('ticketHolderName').value != '') & (document.getElementById('ticketAddress').value == '')) {
-//                alert('Enter an address');
-//            }
-//            else if ((document.getElementById('ticketHolderName').value == '') & (document.getElementById('ticketAddress').value == '')) {
-//                alert('Ticket owner name and address fields need to be filled');
-//            }
-//            else
-//                ticketPreview(); //call ticketPreview function if both ticket owner name and address fields are filled out
-//        }
-//        </script>";
-//        //ClientScript.RegisterClientScriptBlock("experiment", script);
-//        this.ClientScript.RegisterClientScriptBlock(this.GetType(), "script", script);
-//        ticketBtn.Attributes.Add("onClick", "verify()");
     }
 
     protected void completeBtnEvent(object sender, EventArgs e)
@@ -52,6 +20,8 @@ public partial class Main : System.Web.UI.Page
         transObj.TicketHolderName = ticketHolderName.Text;
         transObj.ShippingAddress = ticketAddress.Text;
         transObj.AccountNumber = acctNum.Text;
+        transObj.EventName = allEvents.Text;
+        //transObj.PayMethod = 
         myTransObj.Add(transObj);
 
         Application["TransactionList"] = myTransObj;

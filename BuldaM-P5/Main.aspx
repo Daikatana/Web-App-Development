@@ -285,6 +285,14 @@
             <div id="paymentRadioBtn">
                 Payment Method:&nbsp&nbsp
             <!--asp radio buttons used for the selection of Payment Type-->
+
+                    <asp:RadioButtonList runat="server" ID="rdoLstPayMethod" AutoPostBack="true">
+    <asp:ListItem Value="VISA" Selected="True"></asp:ListItem>
+    <asp:ListItem Value="Master"></asp:ListItem>
+    <asp:ListItem Value="PayPal"></asp:ListItem>
+</asp:RadioButtonList>
+
+
                 <asp:RadioButton GroupName="payType" ID="rdoVisa" Text="VISA" Checked="true" runat="server" />&nbsp&nbsp
             <asp:RadioButton GroupName="payType" ID="rdoMaster" Text="Master" runat="server" />&nbsp&nbsp
             <asp:RadioButton GroupName="payType" ID="rdoPayPal" Text="PayPal" runat="server" />

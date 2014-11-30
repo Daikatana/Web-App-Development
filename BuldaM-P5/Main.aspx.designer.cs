@@ -147,6 +147,15 @@ public partial class Main {
     protected global::System.Web.UI.WebControls.RegularExpressionValidator RegExpVal_AddrMainPg;
     
     /// <summary>
+    /// rdoLstPayMethod control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RadioButtonList rdoLstPayMethod;
+    
+    /// <summary>
     /// rdoVisa control.
     /// </summary>
     /// <remarks>
