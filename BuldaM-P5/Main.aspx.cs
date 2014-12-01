@@ -21,7 +21,10 @@ public partial class Main : System.Web.UI.Page
         transObj.ShippingAddress = ticketAddress.Text;
         transObj.AccountNumber = acctNum.Text;
         transObj.EventName = allEvents.Text;
-        //transObj.PayMethod = 
+        transObj.PayMethod = rdoLstPayMethod.SelectedValue;
+        transObj.NumberOfTickets = numOfTix.SelectedValue;
+        transObj.TicketNumber = tickNum.Text;
+        //still need email address...
         myTransObj.Add(transObj);
 
         Application["TransactionList"] = myTransObj;

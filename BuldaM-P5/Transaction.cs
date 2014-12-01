@@ -7,8 +7,8 @@ using System.Web;
 public class Transaction
 {
     String emailAddress; //Primary Key
-    int ticketNumber; //Order Locator number
-    int numberOfTickets;
+    String ticketNumber; //Order Locator number
+    String numberOfTickets;
     String ticketHolderName;
     String shippingAddress;
     String eventName;
@@ -23,7 +23,7 @@ public class Transaction
         //
     }
 
-    public int NumberOfTickets
+    public String NumberOfTickets
     {
         get { return numberOfTickets; }
         set { numberOfTickets = value; }
@@ -35,7 +35,7 @@ public class Transaction
         get { return emailAddress; }
         set { emailAddress = value; }
     }
-    public int TicketNumber
+    public String TicketNumber
     {
         get { return ticketNumber; }
         set { ticketNumber = value; }

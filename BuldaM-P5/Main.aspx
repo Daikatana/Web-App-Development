@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="True" EnableEventValidation="false" CodeBehind="Main.aspx.cs" Inherits="Main" %>
+
 <%@ Register TagPrefix="Banner" TagName="BannerControl" Src="BannerControl.ascx" %>
 
 <!DOCTYPE html>
@@ -132,16 +133,16 @@
 <body onload="loadSportsEvents();">
 
     <%--This is the user control to load the banner--%>
-    <Banner:BannerControl id="Header1" runat="server"></Banner:BannerControl>
-    
+    <Banner:BannerControl ID="Header1" runat="server"></Banner:BannerControl>
+
 
     <!--create a form to run serverside-->
     <form id="serverForm" runat="server">
-        
+
         <div class="formContainer">
             <br />
-    <asp:Button runat="server" ID="btnExistingOrder" Text="View Existing Order" CssClass="Button"/>
-    <br />
+            <asp:Button runat="server" ID="btnExistingOrder" Text="View Existing Order" CssClass="Button" />
+            <br />
             <!--Radio button information-->
             <div id="ticketRadioBtn">
                 Select ticket type:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
@@ -191,7 +192,8 @@
 
             <asp:Table runat="server" CssClass="HolderInfo">
                 <asp:TableRow>
-                    <asp:TableCell runat="server"><asp:Label runat="server" Text="Holder Name:"></asp:Label>
+                    <asp:TableCell runat="server">
+                        <asp:Label runat="server" Text="Holder Name:"></asp:Label>
                         <br />
                         <asp:TextBox runat="server" ID="ticketHolderName" Text="Jimmy Bob"></asp:TextBox>
                         <br />
@@ -214,11 +216,12 @@
                     </asp:TableCell>
                     <asp:TableCell CssClass="headerCell">
                         <%--<asp:Button runat="server" ID="ticketBtn" Text="View Tickets" OnClientClick="verify(); return false" Height="56px" Width="150px"/>--%>
-                        <asp:Button runat="server" ID="ticketBtn" Text="View Tickets" OnClientClick="verify(); return false" Height="56px" Width="150px" />
+                        <asp:Button runat="server" CssClass="Button" ID="ticketBtn" Text="View Tickets" OnClientClick="verify(); return false" Height="56px" Width="150px" />
                     </asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow>
-                    <asp:TableCell runat="server"><asp:Label runat="server" Text="Tickets To (Postal Address)"></asp:Label>
+                    <asp:TableCell runat="server">
+                        <asp:Label runat="server" Text="Tickets To (Postal Address)"></asp:Label>
                         <!--asp Textbox control to hold the address for the ticket-->
                         <asp:TextBox runat="server" ID="ticketAddress" Text="123 Sample Street, Sample City, TX 77510"></asp:TextBox>
                         <br />
@@ -254,7 +257,7 @@
                 <h1 id="tickQty" style="text-align: center; float: right; font-size: 70px; color: red; margin-top: 0; margin-bottom: 0; margin: auto;"></h1>
                 <table id="ticketTable" style="margin-left: auto; margin-right: auto; border-spacing: 8px 2px;">
                     <tr id="ticketNumber">
-                        <th colspan="2" id="tickNum" style="text-align: center; font-family: Verdana; font-weight: bold; font-size: large; color: maroon;"></th>
+                        <asp:Label runat="server" ID="tickNum" CssClass="tickNumLabelMainPage"></asp:Label>
                     </tr>
                     <!--end of row that will hold ticket number-->
                     <tr>
@@ -283,19 +286,25 @@
             <!--**********************************************************Ticket Preview*************************************************************************-->
             <!--Payment radio buttons-->
             <div id="paymentRadioBtn">
-                Payment Method:&nbsp&nbsp
+                <asp:Table runat="server">
+                    <asp:TableRow>
+                        <asp:TableCell>
+                <asp:Label runat="server" Text="Payment Method:&nbsp&nbsp"></asp:Label>
             <!--asp radio buttons used for the selection of Payment Type-->
+                </asp:TableCell>
+                            <asp:TableCell>
+                <asp:RadioButtonList runat="server" ID="rdoLstPayMethod" RepeatDirection="Horizontal">
+                    <asp:ListItem Value="VISA" Selected="True"></asp:ListItem>
+                    <asp:ListItem Value="  Master"></asp:ListItem>
+                    <asp:ListItem Value="  PayPal"></asp:ListItem>
+                </asp:RadioButtonList>
+                            </asp:TableCell>
+                        </asp:TableRow>
+            </asp:Table>
 
-                    <asp:RadioButtonList runat="server" ID="rdoLstPayMethod" AutoPostBack="true">
-    <asp:ListItem Value="VISA" Selected="True"></asp:ListItem>
-    <asp:ListItem Value="Master"></asp:ListItem>
-    <asp:ListItem Value="PayPal"></asp:ListItem>
-</asp:RadioButtonList>
-
-
-                <asp:RadioButton GroupName="payType" ID="rdoVisa" Text="VISA" Checked="true" runat="server" />&nbsp&nbsp
+                <%--<asp:RadioButton GroupName="payType" ID="rdoVisa" Text="VISA" Checked="true" runat="server" />&nbsp&nbsp
             <asp:RadioButton GroupName="payType" ID="rdoMaster" Text="Master" runat="server" />&nbsp&nbsp
-            <asp:RadioButton GroupName="payType" ID="rdoPayPal" Text="PayPal" runat="server" />
+            <asp:RadioButton GroupName="payType" ID="rdoPayPal" Text="PayPal" runat="server" />--%>
             </div>
 
             <!--Account number input field-->
@@ -322,6 +331,7 @@
                 <%--OnClientClick="if (!acctNumValidate()) { return false;};"--%>
                 <%--PostBackUrl="~/SuccessMsg.aspx"--%>
                 <asp:Button runat="server" ID="completeBtn" Style="height: 35px"
+                    CssClass="Button"
                     OnClick="completeBtnEvent"
                     Text="Complete Transaction" />
 

@@ -147,6 +147,15 @@ public partial class Main {
     protected global::System.Web.UI.WebControls.RegularExpressionValidator RegExpVal_AddrMainPg;
     
     /// <summary>
+    /// tickNum control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Label tickNum;
+    
+    /// <summary>
     /// rdoLstPayMethod control.
     /// </summary>
     /// <remarks>
@@ -154,33 +163,6 @@ public partial class Main {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.RadioButtonList rdoLstPayMethod;
-    
-    /// <summary>
-    /// rdoVisa control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.RadioButton rdoVisa;
-    
-    /// <summary>
-    /// rdoMaster control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.RadioButton rdoMaster;
-    
-    /// <summary>
-    /// rdoPayPal control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.RadioButton rdoPayPal;
     
     /// <summary>
     /// acctNum control.

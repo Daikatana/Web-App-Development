@@ -43,11 +43,30 @@ using System.Web.UI.WebControls;
                     else
                     {
                         String pwd = currObj.PassWord;
-                        //Response.Write("<script language='javascript'>alert('Your password is ')</script>");
-                        //Console.WriteLine("Your PasswordRecover is " + pwd);
-                        // txtEmailRecover.Text = "This is your last chance!";
-                        pwdConfirmMsg.Text = "Your password is " + pwd;
+
+                        //Code to send email to the user's email for password retrieval
+                        String msgTo = currObj.EmailAddress;
+                        String msgSubject = "Password Retrieval";
+                        String msgBody = "Dear Valued Customer,<br />You are receiving this email because you have requested to recover your password.<br />" +
+                                         "Your current password is: " + currObj.PassWord + "<br />Thank You<br />Houston Ticket Connection Team";
+
+                        MailMessage mailObj = new MailMessage();
+                        mailObj.Body = msgBody;
+                        mailObj.From = new MailAddress("HoustonTicketConnection@gmail.com", "Houston Ticket Connection");
+                        mailObj.To.Add(new MailAddress(msgTo));
+                        mailObj.Subject = msgSubject;
+                        mailObj.IsBodyHtml = true;
+                        SmtpClient SMTPClient = new System.Net.Mail.SmtpClient();
+                        SMTPClient.Host = "smtp.gmail.com";
+                        SMTPClient.Port = 587;
+                        SMTPClient.Credentials = new NetworkCredential("HoustonTicketConnection@gmail.com", "JustForKicks1");
+                        SMTPClient.EnableSsl = true;
+                        try { SMTPClient.Send(mailObj); }
+                        catch (Exception ex) { Label1.Text = ex.ToString(); }
+
+                        pwdConfirmMsg.Text = "Your password has been emailed to you. If you do not see the message in your inbox, check your junk mail.";
                         break;
+
                     }
                 }
                 
@@ -56,29 +75,6 @@ using System.Web.UI.WebControls;
             {
                 pwdConfirmMsg.Text = "There are no accounts stored in our database. Be the first!";
             }
-            
-
-
-            //Code to send email to the user's email for password retrieval
-
-//String msgTo = "Receiver's email";
-//String msgSubject = "Message Subject";
-//String msgBody = "Message Body";
-//MailMessage mailObj = new MailMessage();
-//mailObj.Body = msgBody;
-//mailObj.From = new MailAddress("Sender's Email", "Name to displayed for sender ex. Outdoor Equipment Team");
-//mailObj.To.Add(new MailAddress(msgTo));
-//mailObj.Subject = msgSubject;
-//mailObj.IsBodyHtml = true;
-//SmtpClient SMTPClient = new System.Net.Mail.SmtpClient();
-//SMTPClient.Host = "smtp.gmail.com";
-//SMTPClient.Port=587;
-//SMTPClient.Credentials = new NetworkCredential("Sender's Email", "Sender's Email Password");
-//SMTPClient.EnableSsl = true;
-//try{ SMTPClient.Send(mailObj); }
-//catch (Exception) { Label1.Text = ex.ToString(); }
-
-            
         }
 
         protected void ReturnToDefault_Click(object sender, EventArgs e)
