@@ -11,7 +11,7 @@ namespace BuldaM_P5.App_Code
 {
     public class Global : System.Web.HttpApplication
     {
-
+        Transaction transaction = new Transaction();
         protected void Application_Start(object sender, EventArgs e)
         {
             //ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
@@ -24,7 +24,7 @@ namespace BuldaM_P5.App_Code
 
         protected void Session_Start(object sender, EventArgs e)
         {
-
+            Session["CurrentTrans"] = transaction;
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

@@ -60,6 +60,7 @@
     <Content Include="App_Code\Global.asax" />
     <Content Include="BannerControl.ascx" />
     <Content Include="ConcertEvents.xml" />
+    <Content Include="Default.aspx" />
     <Content Include="ExistingOrder.aspx" />
     <Content Include="images\amazonlogo.jpg" />
     <Content Include="images\AMDlogo.jpg" />
@@ -75,7 +76,7 @@
     <Content Include="images\thinkgeeklogo.jpg" />
     <Content Include="images\ToyotaLogo.jpg" />
     <Content Include="images\WalmartLogo.jpg" />
-    <Content Include="Main.aspx" />
+    <Content Include="MainTicketForm.aspx" />
     <Content Include="MainAds.xml" />
     <Content Include="MyStyle.css" />
     <Content Include="NewMember.aspx" />
@@ -86,7 +87,6 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Default.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\Global.asax.cs">
@@ -100,6 +100,13 @@
       <DependentUpon>BannerControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ExistingOrder.aspx.cs">
       <DependentUpon>ExistingOrder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -107,12 +114,12 @@
     <Compile Include="ExistingOrder.aspx.designer.cs">
       <DependentUpon>ExistingOrder.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Main.aspx.cs">
-      <DependentUpon>Main.aspx</DependentUpon>
+    <Compile Include="MainTicketForm.aspx.cs">
+      <DependentUpon>MainTicketForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Main.aspx.designer.cs">
-      <DependentUpon>Main.aspx</DependentUpon>
+    <Compile Include="MainTicketForm.aspx.designer.cs">
+      <DependentUpon>MainTicketForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="PasswordRecover.aspx.cs">
       <DependentUpon>PasswordRecover.aspx</DependentUpon>
@@ -144,13 +151,6 @@
       <DependentUpon>NewMember.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\WebApp.pubxml" />

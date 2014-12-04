@@ -1,35 +1,40 @@
-﻿<!--
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Default" %>
+<%@ Register TagPrefix="Banner" TagName="BannerControl" Src="BannerControl.ascx" %>
+
+
+<!--
     *************************************************************************************************************
 
     Programmer:     Michael Bulda
 
     Course:         CINF 4320.05
 
-    Date:           November 20, 2014
+    Date:           December 4, 2014
 
-    Assignment:     Program 5 - Phase III of Semester Project: New Forms and Validation
+    Assignment:     Program 6 - Phase IV of Semester Project: Database Access
 
     Environment:    Windows 8.1, Visual Studio 2012
 
     Files Included: Default.aspx, SportsEvents.xml, ConcertEvents.xml, MyStyle.css, images folder with one banner image
-                    NewMember.aspx, Main.aspx, SuccessMsg.aspx, and relevant code-behind files
+                    ExistingOrder.aspx, MainTicketForm.aspx, NewMember.aspx, SuccessMsg.aspx, TicketRetrieval.aspx, and all relevant
+                    code-behind files.
 
-    Purpose:        To create an entry point into the site for the user.
+    Purpose:        To create a fully functional website that can access a database
 
     Input:          Mouse, keyboard
 
     Pre-Condition:  A clean layout which allows users to easily identify a purpose for each of the elements on the page.
-                    Sufficient input validation is required to display the correct results to user.
+                    Sufficient input validation is required to display the correct results to user. Password retrieval must be
+                    available via email. A connection to UHCL SQL server is needed.
 
     Output:         A website that has a functional drop-down list, input fields and submission buttons.
+
+    Notes:          Due to time constraints, I was unable to successfully store/update information into the SQL server. I was able
+                    to create tables, but I was not able to connect to the database. I also was not able to get this website to work
+                    on the DCM server.
     
     *************************************************************************************************************
 -->
-
-
-<%@ Page Language="C#" AutoEventWireup="True" Inherits="DefaultPage" CodeBehind="Default.aspx.cs" %>
-
-<%@ Register TagPrefix="Banner" TagName="BannerControl" Src="BannerControl.ascx" %>
 
 <!DOCTYPE html>
 

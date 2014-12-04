@@ -9,7 +9,7 @@
 
 
 
-public partial class DefaultPage {
+public partial class Default {
     
     /// <summary>
     /// Head1 control.

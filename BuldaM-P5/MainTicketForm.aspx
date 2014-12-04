@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="True" EnableEventValidation="false" CodeBehind="Main.aspx.cs" Inherits="Main" %>
+﻿<%@ Page Language="C#" AutoEventWireup="True" EnableEventValidation="false" CodeBehind="MainTicketForm.aspx.cs" Inherits="Main" %>
 
 <%@ Register TagPrefix="Banner" TagName="BannerControl" Src="BannerControl.ascx" %>
 
@@ -102,8 +102,8 @@
 
         /***********************************************Code to create a ticket preview for the customer*********************************************************/
         function ticketPreview() {
-
-            var num = Math.floor((Math.random() * 1000000) + 1);//random number between 1 and 1 mil generated for ticket number
+            var num = Math.floor(Math.random() * 900000) + 100000;
+            //var num = Math.floor((Math.random() * 1000000) + 1);//random number between 1 and 1 mil generated for ticket number
             var ownerName = document.getElementById("ticketHolderName").value;
             var tktCount = document.getElementById("numOfTix").selectedIndex + 1; //get the number of tickets by customer; add one to index to get the correct answer
             var tickAddr = document.getElementById("ticketAddress").value;
@@ -141,7 +141,7 @@
 
         <div class="formContainer">
             <br />
-            <asp:Button runat="server" ID="btnExistingOrder" Text="View Existing Order" CssClass="Button" />
+            <asp:Button runat="server" ID="btnExistingOrder" Text="View Existing Order" CssClass="Button" OnClick="btnExistingOrder_Click" />
             <br />
             <!--Radio button information-->
             <div id="ticketRadioBtn">

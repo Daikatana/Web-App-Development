@@ -59,7 +59,7 @@ using System.Web.UI.WebControls;
                         SmtpClient SMTPClient = new System.Net.Mail.SmtpClient();
                         SMTPClient.Host = "smtp.gmail.com";
                         SMTPClient.Port = 587;
-                        SMTPClient.Credentials = new NetworkCredential("HoustonTicketConnection@gmail.com", "JustForKicks1");
+                        SMTPClient.Credentials = new NetworkCredential("houstonticketconnection@gmail.com", "JustForKicks1");
                         SMTPClient.EnableSsl = true;
                         try { SMTPClient.Send(mailObj); }
                         catch (Exception ex) { Label1.Text = ex.ToString(); }

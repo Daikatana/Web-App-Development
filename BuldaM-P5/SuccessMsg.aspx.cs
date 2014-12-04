@@ -12,4 +12,9 @@ using System.Web.UI.WebControls;
         {
             //ClientScript.RegisterStartupScript(GetType(), "Javascript", "successMsg(); ", true);
         }
+
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Default.aspx");
+        }
     }

@@ -38,15 +38,15 @@
                             Font-Name="'Arial Narrow'"
                             ForeColor="Red"
                             Font-Size="Medium"
-                            ErrorMessage="Not a valid ticket number. Enter a 10-digit account number."
-                            ValidationExpression="^\d{10}$">
+                            ErrorMessage="Not a valid ticket number. Enter a 6-digit number."
+                            ValidationExpression="^\d{6}$">
                         </asp:RegularExpressionValidator>
                     </asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell></asp:TableCell>
                     <asp:TableCell>
-                        <asp:Button ID="Button1" runat="server" Text="Retrieve Existing Order" CssClass="Button" />
+                        <asp:Button ID="Button1" runat="server" Text="Retrieve Existing Order" CssClass="Button" OnClick="Button1_Click"/>
                     </asp:TableCell>
                 </asp:TableRow>
             </asp:Table>

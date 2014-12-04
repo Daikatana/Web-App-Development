@@ -6,55 +6,55 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class DefaultPage : System.Web.UI.Page
-{
-    protected void Page_Load(object sender, EventArgs e)
+    public partial class Default : System.Web.UI.Page
     {
-        //this.Form.Target = "_blank";
-
-    }
-
-    protected void btnRegister_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("~/NewMember.aspx");
-    }
-
-
-    protected void SignIn(object sender, EventArgs e)
-    {
-        if (Application["CustomerList"] != null)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            ArrayList myObjLst = (ArrayList)Application["CustomerList"];
+            //this.Form.Target = "_blank";
 
-            foreach (Customer currObj in myObjLst)
+        }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/NewMember.aspx");
+        }
+
+
+        protected void SignIn(object sender, EventArgs e)
+        {
+            if (Application["CustomerList"] != null)
             {
-                if ((currObj.EmailAddress.CompareTo(txtEmailDefaultPg.Text) == 0) & (currObj.PassWord.CompareTo(txtPwdDefaultPg.Text) == 0))
-                {
-                    Application["CustomerList"] = myObjLst;
-                    Response.Redirect("~/Main.aspx");
+                ArrayList myObjLst = (ArrayList)Application["CustomerList"];
 
-                }
-                else
+                foreach (Customer currObj in myObjLst)
                 {
-                    Application["CustomerList"] = myObjLst;
-                    Response.Write(@"<script language='javascript'>alert('Login failed! Unable to locate email/password.');</script>");
+                    if ((currObj.EmailAddress.CompareTo(txtEmailDefaultPg.Text) == 0) & (currObj.PassWord.CompareTo(txtPwdDefaultPg.Text) == 0))
+                    {
+                        Application["CustomerList"] = myObjLst;
+                        Response.Redirect("~/MainTicketForm.aspx");
+
+                    }
+                    else
+                    {
+                        Application["CustomerList"] = myObjLst;
+                        Response.Write(@"<script language='javascript'>alert('Login failed! Unable to locate email/password.');</script>");
+                    }
                 }
             }
+            else
+            {
+                Page.Response.Write(@"<script language='javascript'>alert('We have no members yet. Be the first!');</script>");
+            }
         }
-        else
+
+        protected void Ads_AdCreated(object sender, AdCreatedEventArgs e)
         {
-            Page.Response.Write(@"<script language='javascript'>alert('We have no members yet. Be the first!');</script>");
+            // Synchronize the Hyperlink control.
+            //lnkBanner.NavigateUrl = e.NavigateUrl;
+
+            //// Syncrhonize the text of the link.
+            //lnkBanner.Text = "Click here for information about our sponsor: ";
+            //lnkBanner.Text += e.AlternateText;
+
         }
     }
-
-    protected void Ads_AdCreated(object sender, AdCreatedEventArgs e)
-    {
-        // Synchronize the Hyperlink control.
-        //lnkBanner.NavigateUrl = e.NavigateUrl;
-
-        //// Syncrhonize the text of the link.
-        //lnkBanner.Text = "Click here for information about our sponsor: ";
-        //lnkBanner.Text += e.AlternateText;
-
-    }
-}

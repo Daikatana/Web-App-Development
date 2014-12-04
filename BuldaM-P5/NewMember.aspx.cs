@@ -50,7 +50,13 @@ public partial class NewMember : System.Web.UI.Page
             Application["CustomerList"] = CustomerAry;
         }
 
-
+        /*Attempted to make a connection to DCM SQL server, but failed*/
+        //SqlConnection connectionToServer = new SqlConnection("name=UHCLDatabase; connectionString=User id=c432014fa05buldam;password=1242139; Data Source = dcm.uhcl.edu; Initial Catalog=c432014fa05buldam;providerName=System.Data.SqlClient;connection = timeout=30");
+        //string theStatement = "INSERT INTO Customers " + "(" + null + "," + transObj.TicketNumber + "," + transObj.NumberOfTickets + "," +
+        //    customer.TicketHolderName + "," + transObj.ShippingAddress + "," + transObj.EventName + "," + transObj.PayMethod + "," +
+        //    transObj.AccountNumber + ")";
+        //SqlCommand sqlCommand = new SqlCommand(theStatement, connectionToServer); try { connectionToServer.Open(); sqlCommand.ExecuteNonQuery(); }
+        //finally { connectionToServer.Close(); }
 
         
         //if (Application["CustomerLst"] != null)
